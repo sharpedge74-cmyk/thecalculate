@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Bra Calculator – Gentle Sizing for Teens & Beginners | IMRango – IM Rango</title>
+<meta name="description" content="A gentle, supportive guide for teens and first-time bra buyers. Find your first bra size with simple measurements and helpful tips for a comfortable fit.">
+<link rel="canonical" href="http://localhost:4000/first-bra-calculator">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+  <div class="container nav-row" style="position:relative;">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
+        Calculators <span class="nav-caret"></span>
+      </button>
+      <a class="nav-link" href="/bra-measurement-chart">Bra Measurement Chart</a>
+      <a class="nav-link" href="/about">About</a>
+    </nav>
+
+    <a href="#calculator" class="btn btn-primary nav-cta">Try the Calculator</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop mega menu -->
+    <div class="mega" id="megaMenu" role="region" aria-label="Calculators menu">
+      <div class="mega-grid">
+        <div class="mega-col">
+          <h4>Core Calculators</h4>
+          <a href="/bra-size-calculator">Bra Size Calculator<small>Band + bust, the standard method</small></a>
+          <a href="/cup-size-calculator">Cup Size Calculator<small>Just the cup, from a known band</small></a>
+          <a href="/bust-size-calculator">Bust Size Calculator<small>Convert a single bust measurement</small></a>
+          <a href="/band-size-calculator">Band Size Calculator<small>Check your band size alone</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Conversion Tools</h4>
+          <a href="/bra-size-conversion">Bra Size Conversion<small>US · UK · EU · AU · JP</small></a>
+          <a href="/sister-size-calculator">Sister Size Calculator<small>Same volume, different band</small></a>
+          <a href="/brand-size-converter">Brand Size Converter<small>Map your size to a brand chart</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Specialty Calculators</h4>
+          <a href="/abtf-calculator">ABTF Calculator<small>The 3-measurement method</small></a>
+          <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Fit for compression & encapsulation</small></a>
+          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band & cup range</small></a>
+          <a href="/maternity-bra-size-calculator">Maternity & Nursing<small>For a changing body</small></a>
+        </div>
+        <div class="mega-col">
+          <div>
+            <h4>Guides</h4>
+            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+            <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+            <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+            <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+    <button class="hamburger" id="closeMobileNav" aria-label="Close menu">✕</button>
+  </div>
+  <details class="mobile-accordion" open>
+    <summary>Core Calculators</summary>
+    <div class="mega-col">
+      <a href="/bra-size-calculator">Bra Size Calculator</a>
+      <a href="/cup-size-calculator">Cup Size Calculator</a>
+      <a href="/bust-size-calculator">Bust Size Calculator</a>
+      <a href="/band-size-calculator">Band Size Calculator</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Conversion Tools</summary>
+    <div class="mega-col">
+      <a href="/bra-size-conversion">Bra Size Conversion</a>
+      <a href="/sister-size-calculator">Sister Size Calculator</a>
+      <a href="/brand-size-converter">Brand Size Converter</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Specialty Calculators</summary>
+    <div class="mega-col">
+      <a href="/abtf-calculator">ABTF Calculator</a>
+      <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+      <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+      <a href="/maternity-bra-size-calculator">Maternity & Nursing</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Guides</summary>
+    <div class="mega-col">
+      <div>
+        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+        <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      </div>
+    </div>
+  </details>
+  <a class="nav-link" href="/bra-measurement-chart" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">Bra Measurement Chart</a>
+  <a href="/about" class="nav-link" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">About</a>
+</div>
+
+  <div class="ruler" aria-hidden="true"></div>
+  <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+<div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>First Bra Calculator – A Gentle Guide for Teens &amp; Beginners</h1>
+      <p>Getting your first bra can feel confusing. This gentle guide helps you find your starting size with simple measurements – and gives you tips for a comfortable, confident fit. Compare US, UK, EU, AU, and FR sizing.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>First Bra Finder</h2>
+      </div>
+
+      <!-- Unit Toggle Only -->
+      <div class="form-grid" style="grid-template-columns: 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust (Snug)</label>
+            <div class="field-input">
+              <input type="number" id="underbust" step="0.1" value="28" placeholder="e.g. 28">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure snugly under your bust – first bras should feel comfortable, not tight.</p>
+          </div>
+          <div class="field">
+            <label for="bust">Full Bust (Standing)</label>
+            <div class="field-input">
+              <input type="number" id="bust" step="0.1" value="32" placeholder="e.g. 32">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your chest – don't pull the tape tight.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateFirstBra()" style="margin-top:6px;">Find My First Bra Size</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">28A</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">28A</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">28A</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">60A</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">6A</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">75A</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <p id="firstBraAdvice" style="margin-top:6px; color:var(--wine); font-weight:600; font-size:15px;"></p>
+        <div id="sisterChipsContainer" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+        <p class="tool-note" style="margin-top:12px;">Your body is still growing – this is a starting point. Try different styles for comfort. Need help? Visit the <a href="/guides/how-to-measure-bra-size-at-home">Measuring Guide</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Welcome to Your First Bra Journey 💕</h2>
+    <p>Getting your first bra is an important milestone! It's completely normal to feel unsure or have questions. This guide is here to help you feel confident and comfortable. Remember: every body is different, and there's no "right" age or size.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>💗 Remember:</strong> Your size is just a number. The most important thing is how your bra feels. If it's comfortable and you feel good wearing it, that's what matters most!
+    </div>
+
+    <h2>When Do I Need a First Bra?</h2>
+    <p>There's no set age for getting your first bra. Some girls start wearing one as early as 8 or 9, others not until their teens. Here are some signs it might be time:</p>
+    <ul style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li>You notice your breasts are developing (buds forming).</li>
+      <li>Your nipples show through your clothes.</li>
+      <li>You feel uncomfortable without support when running or playing sports.</li>
+      <li>You see other girls your age wearing bras and feel ready.</li>
+    </ul>
+
+    <h2>What Type of First Bra Should I Choose?</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>🩱 Bralettes</h3>
+        <p>Soft, wire-free, and comfortable. Great for beginners. No cups or underwire – just lightweight support. Perfect for small to medium busts.</p>
+        <p><strong>✅ Best for:</strong> First-time wearers, small busts, everyday comfort.</p>
+      </div>
+      <div class="guide-card">
+        <h3>👙 Sports Bras</h3>
+        <p>Compression style, great for activity. Keeps everything in place during gym, sports, or running. Available in low, medium, and high impact.</p>
+        <p><strong>✅ Best for:</strong> Active girls, sports, gym class.</p>
+      </div>
+      <div class="guide-card">
+        <h3>👗 T-Shirt Bras</h3>
+        <p>Lightly lined with smooth cups. Invisible under t-shirts and tops. A step up from bralettes for more coverage and shape.</p>
+        <p><strong>✅ Best for:</strong> When you want more coverage and shape.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🌸 Wire-Free Bras</h3>
+        <p>Like a regular bra but without underwire. Soft cups with adjustable straps. Good for growing bodies.</p>
+        <p><strong>✅ Best for:</strong> Growing busts, comfort, everyday wear.</p>
+      </div>
+    </div>
+
+    <h2>How to Measure for Your First Bra</h2>
+    <p>Don't worry – measuring for your first bra is easy! Here's a simple guide to help you (and maybe a parent or friend) get the right numbers.</p>
+    <ol style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Underbust (Band):</strong> Wrap a soft tape measure around your ribcage right under your bust. Keep it snug but not tight. Breathe out normally and write down the number.</li>
+      <li><strong>Bust (Cup):</strong> Wrap the tape measure around the fullest part of your chest (across your nipples). Keep the tape level and don't pull it tight. Write down this number.</li>
+      <li><strong>Enter both numbers:</strong> Input them into the calculator above and click "Find My First Bra Size". We'll do the rest!</li>
+    </ol>
+
+    <h2>Size Guide for First Bras</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>US Size</th><th>UK Size</th><th>EU Size</th><th>AU Size</th><th>FR Size</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>28A</td><td>28A</td><td>60A</td><td>6A</td><td>75A</td></tr>
+          <tr><td>28B</td><td>28B</td><td>60B</td><td>6B</td><td>75B</td></tr>
+          <tr><td>30A</td><td>30A</td><td>65A</td><td>8A</td><td>80A</td></tr>
+          <tr><td>30B</td><td>30B</td><td>65B</td><td>8B</td><td>80B</td></tr>
+          <tr><td>32A</td><td>32A</td><td>70A</td><td>10A</td><td>85A</td></tr>
+          <tr><td>32B</td><td>32B</td><td>70B</td><td>10B</td><td>85B</td></tr>
+          <tr><td>34A</td><td>34A</td><td>75A</td><td>12A</td><td>90A</td></tr>
+          <tr><td>34B</td><td>34B</td><td>75B</td><td>12B</td><td>90B</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft);">* These are general guidelines. Bodies grow – your size may change over time. That's normal!</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Want to learn more?</p>
+      <a href="/guides/how-to-measure-bra-size-at-home" class="btn btn-primary">Read the Full Measuring Guide</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>What if I'm between sizes?</summary>
+        <p>That's completely normal! Try both sizes and see which feels more comfortable. Many girls are between sizes – especially when they're first starting.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need an underwire bra?</summary>
+        <p>Probably not for your first bra! Most first bras are wire-free for comfort. Underwire can be uncomfortable for developing breasts. Start with soft, wire-free styles.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I don't want to wear a bra?</summary>
+        <p>That's completely okay! Some girls choose not to wear bras, and that's your choice. You should do whatever makes you feel comfortable and confident in your body.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements. Your privacy is important to us!</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions (limited to A-DD for first bras)
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD'];
+  const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD'];
+  const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E'];
+  const AU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD'];
+  const FR_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E'];
+
+  let currentUnit = 'in';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+
+    document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el.value) {
+        const val = parseFloat(el.value);
+        el.value = unit === 'cm' ? Math.round(val * 2.54 * 10) / 10 : Math.round((val / 2.54) * 10) / 10;
+      }
+      el.placeholder = unit === 'cm' ? 'e.g. 71' : 'e.g. 28';
+    });
+
+    if (document.getElementById('resultsCard').classList.contains('show')) {
+      calculateFirstBra();
+    }
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function toInches(val, unit) {
+    return unit === 'cm' ? val / 2.54 : val;
+  }
+
+  function calculateFirstBra() {
+    const unit = currentUnit;
+
+    let ub = toInches(getNum('underbust'), unit);
+    let bust = toInches(getNum('bust'), unit);
+
+    if (ub <= 0 || bust <= 0) {
+      alert('Please enter valid underbust and bust measurements.');
+      return;
+    }
+
+    // Gentle rounding for first bra
+    let roundedUb = Math.round(ub);
+    let bandInches = (roundedUb % 2 === 0) ? roundedUb : roundedUb + 1;
+    if (bandInches < 28) bandInches = 28;
+    if (bandInches > 34) bandInches = 34;
+
+    // Calculate cup difference
+    let diff = bust - bandInches;
+    let cupIdx = Math.round(diff);
+    if (cupIdx < 0) cupIdx = 0;
+    if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+    // Regional sizes
+    const usCup = US_CUPS[cupIdx];
+    const ukCup = UK_CUPS[cupIdx];
+    const euCup = EU_CUPS[cupIdx];
+    const auCup = AU_CUPS[cupIdx];
+    const frCup = FR_CUPS[cupIdx];
+
+    const usBand = bandInches;
+    const ukBand = bandInches;
+    const euBand = Math.round((bandInches - 32) * 2.5 + 70);
+    const auBand = bandInches - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    // Gentle, supportive advice for first-timers
+    const adviceMessages = {
+      'small': 'Try bralettes or soft cup bras – they\'re comfortable and easy to wear. Look for adjustable straps for a custom fit.',
+      'medium': 'Try t-shirt bras or wire-free styles with light padding for a smooth look. Bralettes with support are also a great option.',
+      'larger': 'Try wire-free bras with wider straps for comfort. Sports bras with medium impact can also work well for everyday support.'
+    };
+
+    let adviceKey = 'medium';
+    if (cupIdx <= 1) adviceKey = 'small';
+    else if (cupIdx >= 3) adviceKey = 'larger';
+
+    document.getElementById('resultNote').textContent = `Your first bra size: ${usBand}${usCup} (US) / ${ukBand}${ukCup} (UK) – This is a starting point for your journey.`;
+    document.getElementById('firstBraAdvice').textContent = adviceMessages[adviceKey];
+
+    // Render sister sizes
+    renderSisterSizes(usBand, cupIdx);
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  function renderSisterSizes(usBand, cupIdx) {
+    const container = document.getElementById('sisterChipsContainer');
+    let chips = [];
+
+    if (cupIdx < US_CUPS.length - 1 && usBand - 2 >= 26) {
+      chips.push({ type: 'Tighter Band', size: `${usBand - 2}${US_CUPS[cupIdx + 1]}` });
+    }
+
+    if (cupIdx > 0 && usBand + 2 <= 36) {
+      chips.push({ type: 'Looser Band', size: `${usBand + 2}${US_CUPS[cupIdx - 1]}` });
+    }
+
+    if (chips.length === 0) {
+      container.innerHTML = '<span style="font-size:13px; color:var(--ink-soft);">No sister sizes found for this range – that\'s okay! Your size is a great starting point.</span>';
+    } else {
+      container.innerHTML = chips.map(c =>
+        `<span class="tag tag-core" style="background:var(--paper-2); color:var(--ink); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">${c.size} <small style="font-weight:400; color:var(--ink-soft);">(${c.type})</small></span>`
+      ).join('');
+    }
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function() {
+          if (document.getElementById('resultsCard').classList.contains('show')) {
+            calculateFirstBra();
+          }
+        });
+      }
+    });
+  });
+</script>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Calculators</h4>
+        <a href="/bra-size-calculator">Bra Size Calculator</a>
+        <a href="/cup-size-calculator">Cup Size Calculator</a>
+        <a href="/bust-size-calculator">Bust Size Calculator</a>
+        <a href="/bra-size-conversion">Bra Size Conversion</a>
+      </div>
+      <div>
+        <div>
+          <h4>Guides</h4>
+          <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+          <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+          <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+          <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+          <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/editorial-policy">Editorial Policy</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IM Rango. All rights reserved.</span>
+      <span>Estimates only – not a substitute for a professional fitting.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

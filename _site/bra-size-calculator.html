@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bra Size Calculator – Find Your Perfect Fit | IMRango – IM Rango</title>
+<meta name="description" content="Use our easy bra size calculator to find your band and cup size. Enter your measurements and get your US/UK size in seconds.">
+<link rel="canonical" href="http://localhost:4000/bra-size-calculator">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+  <div class="container nav-row" style="position:relative;">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
+        Calculators <span class="nav-caret"></span>
+      </button>
+      <a class="nav-link" href="/bra-measurement-chart">Bra Measurement Chart</a>
+      <a class="nav-link" href="/about">About</a>
+    </nav>
+
+    <a href="#calculator" class="btn btn-primary nav-cta">Try the Calculator</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop mega menu -->
+    <div class="mega" id="megaMenu" role="region" aria-label="Calculators menu">
+      <div class="mega-grid">
+        <div class="mega-col">
+          <h4>Core Calculators</h4>
+          <a href="/bra-size-calculator">Bra Size Calculator<small>Band + bust, the standard method</small></a>
+          <a href="/cup-size-calculator">Cup Size Calculator<small>Just the cup, from a known band</small></a>
+          <a href="/bust-size-calculator">Bust Size Calculator<small>Convert a single bust measurement</small></a>
+          <a href="/band-size-calculator">Band Size Calculator<small>Check your band size alone</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Conversion Tools</h4>
+          <a href="/bra-size-conversion">Bra Size Conversion<small>US · UK · EU · AU · JP</small></a>
+          <a href="/sister-size-calculator">Sister Size Calculator<small>Same volume, different band</small></a>
+          <a href="/brand-size-converter">Brand Size Converter<small>Map your size to a brand chart</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Specialty Calculators</h4>
+          <a href="/abtf-calculator">ABTF Calculator<small>The 3-measurement method</small></a>
+          <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Fit for compression & encapsulation</small></a>
+          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band & cup range</small></a>
+          <a href="/maternity-bra-size-calculator">Maternity & Nursing<small>For a changing body</small></a>
+        </div>
+        <div class="mega-col">
+          <div>
+            <h4>Guides</h4>
+            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+            <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+            <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+            <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+    <button class="hamburger" id="closeMobileNav" aria-label="Close menu">✕</button>
+  </div>
+  <details class="mobile-accordion" open>
+    <summary>Core Calculators</summary>
+    <div class="mega-col">
+      <a href="/bra-size-calculator">Bra Size Calculator</a>
+      <a href="/cup-size-calculator">Cup Size Calculator</a>
+      <a href="/bust-size-calculator">Bust Size Calculator</a>
+      <a href="/band-size-calculator">Band Size Calculator</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Conversion Tools</summary>
+    <div class="mega-col">
+      <a href="/bra-size-conversion">Bra Size Conversion</a>
+      <a href="/sister-size-calculator">Sister Size Calculator</a>
+      <a href="/brand-size-converter">Brand Size Converter</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Specialty Calculators</summary>
+    <div class="mega-col">
+      <a href="/abtf-calculator">ABTF Calculator</a>
+      <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+      <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+      <a href="/maternity-bra-size-calculator">Maternity & Nursing</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Guides</summary>
+    <div class="mega-col">
+      <div>
+        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+        <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      </div>
+    </div>
+  </details>
+  <a class="nav-link" href="/bra-measurement-chart" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">Bra Measurement Chart</a>
+  <a href="/about" class="nav-link" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">About</a>
+</div>
+
+  <div class="ruler" aria-hidden="true"></div>
+  <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+<div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+
+  <main id="main">
+    <section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Bra Size Calculator – Find Your Band &amp; Cup Size</h1>
+      <p>Just two measurements – underbust and bust – and we’ll give you your estimated US and UK bra size. It’s fast, private, and works for everyone.</p>
+    </div>
+
+    <!-- calculator tool – uses only global classes -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Bra Size Calculator</h2>
+        <div class="unit-toggle" role="group" aria-label="Measurement unit">
+          <button type="button" id="unitIn" aria-pressed="true">in</button>
+          <button type="button" id="unitCm" aria-pressed="false">cm</button>
+        </div>
+      </div>
+
+      <form id="calcForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust measurement</label>
+            <div class="field-input">
+              <input type="number" id="underbust" inputmode="decimal" step="0.5" min="20" max="60" placeholder="e.g. 32" required>
+              <span class="unit-suffix" id="suffix1">in</span>
+            </div>
+            <p class="field-hint">Measure snugly around your ribcage, just under the bust.</p>
+          </div>
+
+          <div class="field">
+            <label for="bust">Bust measurement</label>
+            <div class="field-input">
+              <input type="number" id="bust" inputmode="decimal" step="0.5" min="24" max="70" placeholder="e.g. 38" required>
+              <span class="unit-suffix" id="suffix2">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your bust, tape level.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Calculate My Size</button>
+      </form>
+
+      <div class="result-panel" id="resultPanel" aria-live="polite">
+        <div class="result-size" id="resultSize">34B</div>
+        <p id="resultNote">This is your estimated US band and cup size.</p>
+      </div>
+
+      <p class="tool-note">Want cup size only, or a different method? <a href="/calculators">See all 14 calculators ↓</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CONTENT SECTIONS ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Is a Bra Size, Anyway?</h2>
+    <p>A bra size has two parts: the <strong>band</strong> (the number) and the <strong>cup</strong> (the letter). The band wraps around your ribcage, and the cup holds your breasts. Together, they give you a size like <strong>34B</strong> or <strong>36D</strong>.</p>
+
+    <p>The band number comes from your underbust measurement – the part just below your breasts. The cup letter comes from the difference between your bust (fullest part) and your band. Every inch of difference is one cup letter: 1″ = A, 2″ = B, and so on.</p>
+
+    <h2>How to Measure at Home – Easy Steps</h2>
+    <p>You don’t need a professional fitter. Just follow these simple steps with a soft tape measure (like the kind used for sewing).</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>📏 1. Underbust</h3>
+        <p>Wrap the tape around your ribcage, right under your bust. Keep it snug but not tight. Take the measurement after you breathe out normally.</p>
+        <p><strong>Tip:</strong> If you get an odd number (like 31), round up to the next even number (32). That’s your band size.</p>
+      </div>
+      <div class="guide-card">
+        <h3>📐 2. Bust</h3>
+        <p>Measure around the fullest part of your bust – usually across the nipples. Keep the tape level and don’t pull it tight. It should sit gently against your skin.</p>
+        <p><strong>Tip:</strong> Take two or three measurements and average them. This gives you a more accurate number.</p>
+      </div>
+    </div>
+
+    <p>Now enter both numbers in the calculator above. It will do the math for you and show your size in seconds.</p>
+
+    <h2>Why Your Bra Size Might Change</h2>
+    <p>Your size can change over time – because of weight changes, pregnancy, or even the brand of bra you buy. That’s why it’s a good idea to measure yourself every few months. Our calculator gives you a reliable starting point every time.</p>
+
+    <h2>What About Sister Sizes?</h2>
+    <p>Sometimes your usual size is sold out, or a bra fits differently than expected. That’s when <strong>sister sizing</strong> helps. Sister sizes are bras that hold the same cup volume but have a different band and cup letter.</p>
+    <p>For example, if you wear <strong>34C</strong>, your sister sizes are <strong>32D</strong> (smaller band, bigger cup) and <strong>36B</strong> (bigger band, smaller cup). If the band feels too tight, try the next sister size up. If it’s too loose, go down.</p>
+
+    <div class="guide-card">
+      <p><strong>Need help finding a sister size?</strong></p>
+      <a href="/sister-size-calculator" class="btn btn-primary">Try Our Sister Size Calculator →</a>
+    </div>
+
+    <h2>US vs UK – What’s the Difference?</h2>
+    <p>The band number is the same in both systems – a 34 is a 34 everywhere. But from cup size D and above, the letters change. For example, a US <strong>DDD</strong> is a UK <strong>E</strong>. A US <strong>G</strong> is a UK <strong>F</strong>. If you’re shopping from a UK brand, use our <a href="/bra-size-conversion">conversion tool</a> to make sure you get the right letter.</p>
+
+    <h2>Why Trust This Calculator?</h2>
+    <ul>
+      <li><strong>It’s free</strong> – no sign‑up, no hidden fees.</li>
+      <li><strong>It’s private</strong> – all calculations happen in your browser, so we never see your measurements.</li>
+      <li><strong>It’s accurate</strong> – we use the same formula that professional fitters use.</li>
+      <li><strong>We update it</strong> – our sizing charts are checked regularly to match current brands.</li>
+    </ul>
+    <p>Remember: your result is a <em>starting point</em>. Because every brand and fabric is different, we always recommend trying on a bra before you buy – or ordering a few sister sizes to find the one that feels best.</p>
+
+    <div class="guide-card">
+      <p><strong>Ready to get your perfect size?</strong></p>
+      <p>Head back to the calculator above and enter your measurements right now.</p>
+      <a href="#calculator" class="btn btn-primary">Go to Calculator ↑</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript (same as homepage) -->
+<script>
+  // Unit toggle
+  const unitIn = document.getElementById('unitIn');
+  const unitCm = document.getElementById('unitCm');
+  const underbustInput = document.getElementById('underbust');
+  const bustInput = document.getElementById('bust');
+  const suffix1 = document.getElementById('suffix1');
+  const suffix2 = document.getElementById('suffix2');
+  let currentUnit = 'in';
+
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+    unitIn.setAttribute('aria-pressed', String(unit === 'in'));
+    unitCm.setAttribute('aria-pressed', String(unit === 'cm'));
+    suffix1.textContent = unit;
+    suffix2.textContent = unit;
+    if (underbustInput.value) {
+      const v = parseFloat(underbustInput.value);
+      underbustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
+    }
+    if (bustInput.value) {
+      const v = parseFloat(bustInput.value);
+      bustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
+    }
+    underbustInput.placeholder = unit === 'cm' ? 'e.g. 81' : 'e.g. 32';
+    bustInput.placeholder = unit === 'cm' ? 'e.g. 96' : 'e.g. 38';
+  }
+  unitIn.addEventListener('click', () => setUnit('in'));
+  unitCm.addEventListener('click', () => setUnit('cm'));
+
+  // Main logic
+  const cupLetters = ['AA','A','B','C','D','DD/E','DDD/F','G','H','I','J'];
+
+  function calculateSize(underbustVal, bustVal, unit) {
+    let underbustIn = unit === 'cm' ? underbustVal / 2.54 : underbustVal;
+    let bustIn = unit === 'cm' ? bustVal / 2.54 : bustVal;
+    const base = Math.round(underbustIn);
+    const band = (base % 2 === 0) ? base + 4 : base + 5;
+    let diff = Math.round(bustIn) - band;
+    if (diff < 0) diff = 0;
+    const cup = cupLetters[Math.min(diff, cupLetters.length - 1)];
+    return { band, cup };
+  }
+
+  const form = document.getElementById('calcForm');
+  const resultPanel = document.getElementById('resultPanel');
+  const resultSize = document.getElementById('resultSize');
+  const resultNote = document.getElementById('resultNote');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const u = parseFloat(underbustInput.value);
+    const b = parseFloat(bustInput.value);
+    if (!u || !b || b <= u) {
+      resultPanel.classList.add('show');
+      resultSize.textContent = '—';
+      resultNote.textContent = 'Enter a valid underbust and bust measurement (bust should be larger than underbust).';
+      return;
+    }
+    const { band, cup } = calculateSize(u, b, currentUnit);
+    resultSize.textContent = `${band}${cup}`;
+    resultNote.textContent = 'This is your estimated US band and cup size. UK sizing usually matches the letter; EU sizing differs — use the conversion calculator to check.';
+    resultPanel.classList.add('show');
+  });
+</script>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Calculators</h4>
+        <a href="/bra-size-calculator">Bra Size Calculator</a>
+        <a href="/cup-size-calculator">Cup Size Calculator</a>
+        <a href="/bust-size-calculator">Bust Size Calculator</a>
+        <a href="/bra-size-conversion">Bra Size Conversion</a>
+      </div>
+      <div>
+        <div>
+          <h4>Guides</h4>
+          <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+          <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+          <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+          <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+          <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/editorial-policy">Editorial Policy</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IM Rango. All rights reserved.</span>
+      <span>Estimates only – not a substitute for a professional fitting.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
