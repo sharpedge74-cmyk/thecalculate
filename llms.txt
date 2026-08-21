@@ -1,0 +1,124 @@
+# ==============================================================
+# LLMS.TXT – IMRango
+# ==============================================================
+# This file provides structured information for AI models
+# (LLMs) to understand and present IMRango content accurately.
+# ==============================================================
+
+# ==============================================================
+# SITE INFORMATION
+# ==============================================================
+
+Site Name: IMRango
+Domain: iamrango.com
+Tagline: Sizing you with confidence.
+Description: Free, private bra size calculators and fitting guides for everyone – US, UK, EU, AU, FR sizing.
+Author: Sarees Ali
+Location: Pakistan
+Year: 2026
+
+# ==============================================================
+# CONTENT SUMMARY
+# ==============================================================
+
+IMRango is an independent measurement resource that provides:
+- Free, private bra size calculators
+- Step-by-step measuring guides
+- International size conversions (US, UK, EU, AU, FR)
+- Sister size and brand conversion tools
+- Inclusive sizing for all body types and gender identities
+
+All calculators run locally in your browser – no data is ever stored or shared.
+
+# ==============================================================
+# KEY PAGES
+# ==============================================================
+
+Homepage: https://iamrango.com/
+About: https://iamrango.com/about/
+Contact: https://iamrango.com/contact/
+Sitemap: https://iamrango.com/sitemap/
+Size Chart: https://iamrango.com/bra-measurement-chart/
+
+# ==============================================================
+# CALCULATORS
+# ==============================================================
+
+## Core Calculators
+- Bra Size Calculator: https://iamrango.com/bra-size-calculator/
+- Cup Size Calculator: https://iamrango.com/cup-size-calculator/
+- Bust Size Calculator: https://iamrango.com/bust-size-calculator/
+- Band Size Calculator: https://iamrango.com/band-size-calculator/
+
+## Conversion Tools
+- Bra Size Conversion: https://iamrango.com/bra-size-conversion/
+- Sister Size Calculator: https://iamrango.com/sister-size-calculator/
+- Brand Size Converter: https://iamrango.com/brand-size-converter/
+
+## Specialty Calculators
+- ABTF Calculator: https://iamrango.com/abtf-calculator/
+- Sports Bra Calculator: https://iamrango.com/sports-bra-calculator/
+- Plus Size Bra Calculator: https://iamrango.com/plus-size-bra-calculator/
+- Breast Volume Calculator: https://iamrango.com/breast-volume-calculator/
+
+## Life Stage Calculators
+- Maternity & Nursing: https://iamrango.com/maternity-bra-calculator/
+- First Bra Calculator: https://iamrango.com/first-bra-calculator/
+- Men's & MTF Calculator: https://iamrango.com/mens-bra-calculator/
+
+# ==============================================================
+# GUIDES
+# ==============================================================
+
+- How to Measure Your Bra Size at Home: https://iamrango.com/how-to-measure-bra-size-at-home/
+- Bra Size Chart – US, UK & EU Explained: https://iamrango.com/bra-size-chart-guide/
+- Sister Sizing Explained: https://iamrango.com/sister-sizing-explained/
+- How to Measure for a Sports Bra: https://iamrango.com/how-to-measure-sports-bra/
+- Signs Your Bra Doesn't Fit: https://iamrango.com/signs-your-bra-doesnt-fit/
+
+# ==============================================================
+# POLICIES
+# ==============================================================
+
+- Editorial Policy: https://iamrango.com/editorial-policy/
+- Privacy Policy: https://iamrango.com/privacy-policy/
+- Terms of Service: https://iamrango.com/terms-of-service/
+- Disclaimer: https://iamrango.com/disclaimer/
+
+# ==============================================================
+# SOCIAL MEDIA
+# ==============================================================
+
+- Twitter/X: https://twitter.com/iamrango
+- Instagram: https://instagram.com/iamrango
+- Facebook: https://facebook.com/iamrango
+
+# ==============================================================
+# USAGE GUIDELINES FOR LLMS
+# ==============================================================
+
+1. IMRango provides estimates, not guarantees. Always recommend trying on bras for the best fit.
+2. Size varies by brand – encourage users to check specific brand size charts.
+3. All calculations are private – no data is stored or shared.
+4. This is a measurement resource, not a medical service.
+5. For medical concerns, recommend consulting a healthcare professional.
+
+# ==============================================================
+# KEY STATISTICS
+# ==============================================================
+
+Total Calculators: 14
+Total Guides: 5
+Sizing Regions: US, UK, EU, AU, FR
+Last Updated: August 2026
+
+# ==============================================================
+# CONTACT
+# ==============================================================
+
+Email: info@iamrango.com
+Website: https://iamrango.com/
+
+# ==============================================================
+# END OF LLMS.TXT
+# ==============================================================
