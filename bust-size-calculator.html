@@ -1,0 +1,194 @@
+---
+layout: default
+title: Bust Size Calculator – Convert Your Bust Measurement | IMRango
+description: Enter your underbust and bust measurements to get your full bra size. Learn how your bust measurement determines your cup letter – fast, private, and easy.
+---
+
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Bust Size Calculator – Find Your Bra Size from Your Bust</h1>
+      <p>Enter your underbust and bust measurements below, and we’ll give you your estimated US and UK bra size. Your bust measurement is the key to finding your cup letter – it's fast, private, and works for everyone.</p>
+    </div>
+
+    <!-- calculator tool (same as bra-size-calculator) -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Bust Size Calculator</h2>
+        <div class="unit-toggle" role="group" aria-label="Measurement unit">
+          <button type="button" id="unitIn" aria-pressed="true">in</button>
+          <button type="button" id="unitCm" aria-pressed="false">cm</button>
+        </div>
+      </div>
+
+      <form id="calcForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust measurement</label>
+            <div class="field-input">
+              <input type="number" id="underbust" inputmode="decimal" step="0.5" min="20" max="60" placeholder="e.g. 32" required>
+              <span class="unit-suffix" id="suffix1">in</span>
+            </div>
+            <p class="field-hint">Measure snugly around your ribcage, just under the bust.</p>
+          </div>
+
+          <div class="field">
+            <label for="bust">Bust measurement</label>
+            <div class="field-input">
+              <input type="number" id="bust" inputmode="decimal" step="0.5" min="24" max="70" placeholder="e.g. 38" required>
+              <span class="unit-suffix" id="suffix2">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your bust – this is your bust measurement.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Calculate My Size</button>
+      </form>
+
+      <div class="result-panel" id="resultPanel" aria-live="polite">
+        <div class="result-size" id="resultSize">34B</div>
+        <p id="resultNote">This is your estimated US band and cup size.</p>
+      </div>
+
+      <p class="tool-note">Need just your cup letter? Try the <a href="/cup-size-calculator">Cup Size Calculator</a> or convert to international sizes with the <a href="/bra-size-conversion">Conversion Tool</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EASY‑TO‑READ CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Is a Bust Measurement?</h2>
+    <p>Your <strong>bust measurement</strong> is the circumference around the fullest part of your chest – usually across the nipples. It’s one of the two key numbers you need to find your bra size. The other is your underbust (the band). The difference between your bust and your band gives you your cup letter.</p>
+
+    <p>For example, if your bust is 38 inches and your band is 34 inches, the difference is 4 inches – which is a <strong>D cup</strong>. So your bust measurement directly decides your cup size.</p>
+
+    <h2>How to Measure Your Bust Correctly</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Step 1: Stand Up Straight</h3>
+        <p>Keep your feet flat, shoulders relaxed, and arms at your sides. This gives you the most accurate reading.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Step 2: Use a Soft Tape Measure</h3>
+        <p>Wrap it around the fullest part of your bust – the tape should be level and not too tight. It should rest gently against your skin without compressing.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Step 3: Take the Measurement</h3>
+        <p>Look straight ahead in a mirror to make sure the tape is level. Take two or three measurements and use the average for best accuracy.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Step 4: Enter It in the Calculator</h3>
+        <p>Now enter your bust measurement (and your underbust) into the tool above. We'll do the rest – your band and cup size will appear in seconds.</p>
+      </div>
+    </div>
+
+    <h2>Why Your Bust Measurement Matters</h2>
+    <p>Without your bust measurement, you can’t know your cup size. The band gives you the number, but the bust gives you the letter. Together, they tell you exactly which bra size to try on.</p>
+    <p>Remember: your bust measurement alone doesn’t give you a bra size – you need the underbust too. That’s why our calculator asks for both. It’s the most reliable way to get your perfect fit.</p>
+
+    <h2>What Affects Your Bust Measurement?</h2>
+    <ul>
+      <li><strong>Weight changes</strong> – even a few pounds can change your bust size.</li>
+      <li><strong>Hormonal changes</strong> – pregnancy, nursing, or your menstrual cycle can temporarily change your bust size.</li>
+      <li><strong>Brands and styles</strong> – different bras fit differently, so your bust measurement stays the same, but the bra size you need might vary.</li>
+    </ul>
+    <p>That’s why we recommend measuring yourself every few months – especially before buying new bras.</p>
+
+    <h2>Sister Sizing – The Same Bust, Different Letter</h2>
+    <p>If your usual size feels off, you can try a sister size – a different band and cup combination that holds the same cup volume. For example, if your bust measurement gives you a 34C, you could also try a 32D (smaller band, larger cup) or a 36B (larger band, smaller cup). These all have the same cup volume but may feel more comfortable depending on the brand.</p>
+    <p>Use our <a href="/sister-size-calculator">Sister Size Calculator</a> to explore your options.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Want to double-check your band size?</p>
+      <a href="/band-size-calculator" class="btn btn-primary">Try the Band Size Calculator →</a>
+    </div>
+
+    <h2>Why Trust This Calculator?</h2>
+    <ul>
+      <li><strong>It’s free</strong> – no sign‑up, no charges.</li>
+      <li><strong>It’s private</strong> – all calculations happen in your browser.</li>
+      <li><strong>It’s accurate</strong> – we use the same formula professional fitters use.</li>
+      <li><strong>We keep it updated</strong> – our charts are checked regularly to match current brands.</li>
+    </ul>
+    <p>Your result is a great starting point. Every bra fits a little differently, so always try on a few styles to find the one that feels best.</p>
+
+    <div class="guide-card" style="background:var(--wine); text-align:center; padding:20px;">
+      <p style="font-size:1.2rem; font-weight:700; color:var(--white);">Ready to find your size?</p>
+      <p style="color:var(--white);">Enter your bust and underbust measurements in the calculator above right now.</p>
+      <a href="#calculator" class="btn btn-ghost" style="border-color:var(--white); color:var(--white); margin-top:12px; display:inline-block;">Go to Calculator ↑</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript (same as bra-size-calculator) -->
+<script>
+  // Unit toggle
+  const unitIn = document.getElementById('unitIn');
+  const unitCm = document.getElementById('unitCm');
+  const underbustInput = document.getElementById('underbust');
+  const bustInput = document.getElementById('bust');
+  const suffix1 = document.getElementById('suffix1');
+  const suffix2 = document.getElementById('suffix2');
+  let currentUnit = 'in';
+
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+    unitIn.setAttribute('aria-pressed', String(unit === 'in'));
+    unitCm.setAttribute('aria-pressed', String(unit === 'cm'));
+    suffix1.textContent = unit;
+    suffix2.textContent = unit;
+    if (underbustInput.value) {
+      const v = parseFloat(underbustInput.value);
+      underbustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
+    }
+    if (bustInput.value) {
+      const v = parseFloat(bustInput.value);
+      bustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
+    }
+    underbustInput.placeholder = unit === 'cm' ? 'e.g. 81' : 'e.g. 32';
+    bustInput.placeholder = unit === 'cm' ? 'e.g. 96' : 'e.g. 38';
+  }
+  unitIn.addEventListener('click', () => setUnit('in'));
+  unitCm.addEventListener('click', () => setUnit('cm'));
+
+  // Main logic
+  const cupLetters = ['AA','A','B','C','D','DD/E','DDD/F','G','H','I','J'];
+
+  function calculateSize(underbustVal, bustVal, unit) {
+    let underbustIn = unit === 'cm' ? underbustVal / 2.54 : underbustVal;
+    let bustIn = unit === 'cm' ? bustVal / 2.54 : bustVal;
+    const base = Math.round(underbustIn);
+    const band = (base % 2 === 0) ? base + 4 : base + 5;
+    let diff = Math.round(bustIn) - band;
+    if (diff < 0) diff = 0;
+    const cup = cupLetters[Math.min(diff, cupLetters.length - 1)];
+    return { band, cup };
+  }
+
+  const form = document.getElementById('calcForm');
+  const resultPanel = document.getElementById('resultPanel');
+  const resultSize = document.getElementById('resultSize');
+  const resultNote = document.getElementById('resultNote');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const u = parseFloat(underbustInput.value);
+    const b = parseFloat(bustInput.value);
+    if (!u || !b || b <= u) {
+      resultPanel.classList.add('show');
+      resultSize.textContent = '—';
+      resultNote.textContent = 'Enter a valid underbust and bust measurement (bust should be larger than underbust).';
+      return;
+    }
+    const { band, cup } = calculateSize(u, b, currentUnit);
+    resultSize.textContent = `${band}${cup}`;
+    resultNote.textContent = 'This is your estimated US band and cup size. UK sizing usually matches the letter; EU sizing differs — use the conversion calculator to check.';
+    resultPanel.classList.add('show');
+  });
+</script>

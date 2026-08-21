@@ -1,0 +1,369 @@
+---
+layout: default
+title: ABTF Calculator – A Bra That Fits 6-Measurement Method | IMRango
+description: Use the ABTF 6-measurement method for the most accurate bra size. Enter loose, snug, tight underbust and standing, leaning, lying bust for a precise fit.
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>ABTF Calculator – 6-Measurement Method</h1>
+      <p>The "A Bra That Fits" method uses six measurements for the most accurate bra size – especially for larger busts and different breast shapes. Enter your measurements and get your size in US, UK, EU, AU, and FR.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>ABTF Bra Size Calculator</h2>
+      </div>
+
+      <!-- Config Bar with Toggle Buttons -->
+      <div class="form-grid" style="grid-template-columns: 1fr 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Target Region</label>
+          <div class="unit-toggle" role="group" aria-label="Target region">
+            <button type="button" id="regionUS" aria-pressed="true" onclick="setRegion('us')">US</button>
+            <button type="button" id="regionUK" aria-pressed="false" onclick="setRegion('uk')">UK</button>
+            <button type="button" id="regionEU" aria-pressed="false" onclick="setRegion('eu')">EU</button>
+            <button type="button" id="regionAU" aria-pressed="false" onclick="setRegion('au')">AU</button>
+            <button type="button" id="regionFR" aria-pressed="false" onclick="setRegion('fr')">FR</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABTF 6 Measurements -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="looseUb">Loose Underbust</label>
+            <div class="field-input">
+              <input type="number" id="looseUb" step="0.1" value="33" placeholder="e.g. 33">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure underbust without pulling tight – tape should be loose.</p>
+          </div>
+          <div class="field">
+            <label for="snugUb">Snug Underbust</label>
+            <div class="field-input">
+              <input type="number" id="snugUb" step="0.1" value="32" placeholder="e.g. 32">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure underbust snug – tape should be firm but comfortable.</p>
+          </div>
+          <div class="field">
+            <label for="tightUb">Tight Underbust</label>
+            <div class="field-input">
+              <input type="number" id="tightUb" step="0.1" value="30" placeholder="e.g. 30">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Pull tape as tight as possible – exhale fully.</p>
+          </div>
+          <div class="field">
+            <label for="standingBust">Standing Bust</label>
+            <div class="field-input">
+              <input type="number" id="standingBust" step="0.1" value="36" placeholder="e.g. 36">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure bust standing – tape level around fullest part.</p>
+          </div>
+          <div class="field">
+            <label for="leaningBust">Leaning Bust (90°)</label>
+            <div class="field-input">
+              <input type="number" id="leaningBust" step="0.1" value="38" placeholder="e.g. 38">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Lean forward 90° and measure – captures breast projection.</p>
+          </div>
+          <div class="field">
+            <label for="lyingBust">Lying Down Bust</label>
+            <div class="field-input">
+              <input type="number" id="lyingBust" step="0.1" value="37" placeholder="e.g. 37">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure bust while lying flat on your back.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateABTF()" style="margin-top:6px;">Calculate My ABTF Size</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">34C</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">34C</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">34C</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">75C</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">12C</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">90C</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <div id="sisterChipsContainer" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+        <p class="tool-note" style="margin-top:12px;">Need a different method? Try the <a href="/bra-size-calculator">Standard Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Is the ABTF Method?</h2>
+    <p>The <strong>ABTF (A Bra That Fits)</strong> method is a community-developed sizing system that uses <strong>six measurements</strong> – three underbust and three bust – to calculate your most accurate bra size. Unlike standard 2-measurement calculators, ABTF accounts for breast tissue squish, density, and natural projection.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>Why it's more accurate:</strong> Standard calculators use just two measurements. ABTF averages three underbust and three bust measurements, giving you a size that fits your unique shape – not just a generic formula.
+    </div>
+
+    <h2>How to Measure for ABTF</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>📏 Underbust Measurements</h3>
+        <p>Take all three measurements directly under your bust, with the tape level around your ribcage.</p>
+        <ul style="padding-left:1.2rem; margin-top:6px;">
+          <li><strong>Loose:</strong> Tape barely touching – breathe normally.</li>
+          <li><strong>Snug:</strong> Firm but comfortable – tape stays in place.</li>
+          <li><strong>Tight:</strong> Pull as tight as possible – exhale fully.</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>📐 Bust Measurements</h3>
+        <p>Measure around the fullest part of your bust in three positions.</p>
+        <ul style="padding-left:1.2rem; margin-top:6px;">
+          <li><strong>Standing:</strong> Tape level around fullest part.</li>
+          <li><strong>Leaning:</strong> Bend 90° forward – captures projection.</li>
+          <li><strong>Lying:</strong> Flat on your back – captures natural shape.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How ABTF Calculates Your Size</h2>
+    <p>The ABTF method uses the <strong>average of your three underbust measurements</strong> for the band, and the <strong>average of your three bust measurements</strong> for the cup. This averaging reduces measurement error and gives you a size that fits your body's natural shape.</p>
+
+    <p>For example, if your underbust measurements are 33, 32, and 30, the average is 31.7 – rounded to 32 for the band. If your bust measurements average to 36.3, the difference is 4.3 inches – giving you a D cup.</p>
+
+    <h2>ABTF vs Standard vs Victoria's Secret</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Method</th><th>Measurements</th><th>Band</th><th>Best For</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Standard</strong></td><td>2 (underbust, bust)</td><td>Rounded even</td><td>Quick estimate</td></tr>
+          <tr><td><strong>ABTF</strong></td><td>6 (3 underbust, 3 bust)</td><td>Averaged, rounded</td><td>Most accurate</td></tr>
+          <tr><td><strong>Victoria's Secret</strong></td><td>2 (+4 method)</td><td>Underbust +4</td><td>VS store fitting</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Not sure of your measurements?</p>
+      <a href="/guides/how-to-measure-bra-size-at-home" class="btn btn-primary">Read the Measuring Guide</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>Why is ABTF more accurate than standard calculators?</summary>
+        <p>ABTF uses six measurements (three underbust, three bust) instead of two. This averages out measurement errors and accounts for breast tissue squish, density, and natural projection – giving you a size that fits your unique shape.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to wear a bra when measuring for ABTF?</summary>
+        <p>For best results, measure without a bra or with a non-padded, non-pushup bra. This gives the most accurate measurements of your natural shape.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if my ABTF size is different from my usual size?</summary>
+        <p>That's common! Many people find ABTF gives a smaller band and larger cup than they're used to. Try the ABTF size – you might find it's more comfortable and supportive.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD/F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ'];
+  const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const AU_CUPS = UK_CUPS;
+  const FR_CUPS = EU_CUPS;
+
+  let currentUnit = 'in';
+  let currentRegion = 'us';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    // Update button states
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+
+    // Update labels
+    document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+
+    // Convert values
+    const inputs = ['looseUb', 'snugUb', 'tightUb', 'standingBust', 'leaningBust', 'lyingBust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el.value) {
+        const val = parseFloat(el.value);
+        el.value = unit === 'cm' ? Math.round(val * 2.54 * 10) / 10 : Math.round((val / 2.54) * 10) / 10;
+      }
+      el.placeholder = unit === 'cm' ? 'e.g. 84' : 'e.g. 33';
+    });
+  }
+
+  // ----- Region Toggle -----
+  function setRegion(region) {
+    if (region === currentRegion) return;
+    currentRegion = region;
+
+    // Update button states
+    const regions = ['US', 'UK', 'EU', 'AU', 'FR'];
+    regions.forEach(r => {
+      const btn = document.getElementById('region' + r);
+      if (btn) btn.setAttribute('aria-pressed', r.toLowerCase() === region ? 'true' : 'false');
+    });
+
+    // Highlight target region in results
+    if (document.getElementById('resultsCard').classList.contains('show')) {
+      calculateABTF();
+    }
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function toInches(val, unit) {
+    return unit === 'cm' ? val / 2.54 : val;
+  }
+
+  function calculateABTF() {
+    const unit = currentUnit;
+    const region = currentRegion;
+
+    // Get all 6 measurements
+    const looseUb = toInches(getNum('looseUb'), unit);
+    const snugUb = toInches(getNum('snugUb'), unit);
+    const tightUb = toInches(getNum('tightUb'), unit);
+    const standing = toInches(getNum('standingBust'), unit);
+    const leaning = toInches(getNum('leaningBust'), unit);
+    const lying = toInches(getNum('lyingBust'), unit);
+
+    // Validate
+    if (!snugUb || !standing) {
+      alert('Please enter valid snug underbust and standing bust measurements.');
+      return;
+    }
+
+    // Calculate band: average of three underbust measurements, rounded to nearest even
+    const avgUb = (looseUb + snugUb + tightUb) / 3;
+    let bandInches = Math.round(avgUb);
+    if (bandInches % 2 !== 0) bandInches += 1;
+
+    // Calculate bust: average of three bust measurements
+    const diffLeanStand = leaning - standing;
+    let bustInches;
+    if (diffLeanStand <= 2.5) {
+      bustInches = (standing + leaning + lying) / 3;
+    } else {
+      bustInches = standing + (diffLeanStand * 0.5);
+    }
+
+    // Calculate cup
+    let diff = bustInches - bandInches;
+    let cupIdx = Math.round(diff);
+    if (cupIdx < 0) cupIdx = 0;
+    if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+    // Regional sizes
+    const usCup = US_CUPS[cupIdx];
+    const ukCup = UK_CUPS[cupIdx];
+    const euCup = EU_CUPS[cupIdx];
+    const auCup = AU_CUPS[cupIdx];
+    const frCup = FR_CUPS[cupIdx];
+
+    const usBand = bandInches;
+    const ukBand = bandInches;
+    const euBand = Math.round((bandInches - 32) * 2.5 + 70);
+    const auBand = bandInches - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    document.getElementById('resultNote').textContent = `Your ABTF size for ${region.toUpperCase()}: ${usBand}${usCup} (US) / ${ukBand}${ukCup} (UK) – based on 6 measurements.`;
+
+    // Render sister sizes
+    renderSisterSizes(usBand, cupIdx, region);
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  function renderSisterSizes(usBand, cupIdx, region) {
+    const container = document.getElementById('sisterChipsContainer');
+    let chips = [];
+
+    if (cupIdx < US_CUPS.length - 1 && usBand - 2 >= 26) {
+      const sBand = usBand - 2;
+      const sIdx = cupIdx + 1;
+      chips.push({ type: 'Tighter Band', size: formatRegionalSize(sBand, sIdx, region) });
+    }
+
+    if (cupIdx > 0 && usBand + 2 <= 50) {
+      const sBand = usBand + 2;
+      const sIdx = cupIdx - 1;
+      chips.push({ type: 'Looser Band', size: formatRegionalSize(sBand, sIdx, region) });
+    }
+
+    if (chips.length === 0) {
+      container.innerHTML = '<span style="font-size:13px; color:var(--ink-soft);">No sister sizes found for this range.</span>';
+    } else {
+      container.innerHTML = chips.map(c =>
+        `<span class="tag tag-core" style="background:var(--paper-2); color:var(--ink); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">${c.size} <small style="font-weight:400; color:var(--ink-soft);">(${c.type})</small></span>`
+      ).join('');
+    }
+  }
+
+  function formatRegionalSize(usBand, cupIdx, region) {
+    if (region === 'uk') return `${usBand}${UK_CUPS[cupIdx]}`;
+    if (region === 'eu') return `${Math.round((usBand - 32) * 2.5 + 70)}${EU_CUPS[cupIdx]}`;
+    if (region === 'au') return `${usBand - 22}${AU_CUPS[cupIdx]}`;
+    if (region === 'fr') return `${Math.round((usBand - 32) * 2.5 + 70) + 15}${FR_CUPS[cupIdx]}`;
+    return `${usBand}${US_CUPS[cupIdx]}`;
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+    document.getElementById('regionUS').setAttribute('aria-pressed', 'true');
+  });
+</script>

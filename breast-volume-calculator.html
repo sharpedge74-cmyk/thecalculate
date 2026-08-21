@@ -1,0 +1,254 @@
+---
+layout: default
+title: Breast Volume Calculator – Estimate cc/ml from Bra Size | IMRango
+description: Estimate your breast volume in cubic centimeters (cc) or milliliters (ml) from your bra size. Informational tool – not medical advice.
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Breast Volume Calculator – Estimate in cc/ml</h1>
+      <p>Enter your bra size to get an estimated breast volume in cubic centimeters (cc) or milliliters (ml). This is an informational tool – not medical advice. Uses standard volume estimation based on band and cup size.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Breast Volume Estimator</h2>
+      </div>
+
+      <!-- Unit Toggle Only -->
+      <div class="form-grid" style="grid-template-columns: 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="bandInput">Band size</label>
+            <div class="field-input">
+              <input type="number" id="bandInput" step="1" value="34" placeholder="e.g. 34">
+              <span class="unit-suffix">band</span>
+            </div>
+            <p class="field-hint">Enter your band number (e.g., 32, 34, 36).</p>
+          </div>
+          <div class="field">
+            <label for="cupInput">Cup letter</label>
+            <select id="cupInput" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+              <option value="AA">AA</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C" selected>C</option>
+              <option value="D">D</option>
+              <option value="DD">DD</option>
+              <option value="DDD">DDD</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+              <option value="J">J</option>
+              <option value="K">K</option>
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="N">N</option>
+            </select>
+            <p class="field-hint">Select your cup letter.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateVolume()" style="margin-top:6px;">Estimate Volume</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="volumeResult" style="font-size:clamp(30px,4vw,38px);">400 cc</div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <div style="margin-top:12px; padding:14px; background:var(--paper-2); border-radius:var(--radius-md);">
+          <p style="font-size:13px; color:var(--ink-soft); margin:0;"><strong>🩺 Important:</strong> This is an <strong>informational estimate</strong> only. Actual breast volume varies based on breast shape, density, and individual anatomy. Always consult a medical professional for medical decisions.</p>
+        </div>
+        <p class="tool-note" style="margin-top:12px;">Need to find your bra size? Try the <a href="/bra-size-calculator">Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Is Breast Volume?</h2>
+    <p><strong>Breast volume</strong> is the total amount of breast tissue in cubic centimeters (cc) or milliliters (ml). One cubic centimeter equals one milliliter. This measurement is used in plastic surgery for breast augmentation and reduction, as well as for custom bra fitting and prosthetics.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>Important:</strong> This calculator provides an <strong>estimate</strong> based on bra size. Actual volume varies by breast shape, density, and individual anatomy. Always consult a medical professional for medical decisions.
+    </div>
+
+    <h2>How Breast Volume Is Estimated</h2>
+    <p>This calculator uses established estimation methods based on bra size. The volume is estimated using:</p>
+    <ul style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Band size</strong> – determines the chest circumference.</li>
+      <li><strong>Cup letter</strong> – determines the breast projection.</li>
+      <li><strong>Volume tables</strong> – based on anthropometric studies of breast size and volume.</li>
+    </ul>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>📊 Volume Ranges by Cup Size</h3>
+        <ul style="padding-left:1.2rem; margin-top:6px;">
+          <li><strong>AA:</strong> 100 – 150 cc</li>
+          <li><strong>A:</strong> 150 – 250 cc</li>
+          <li><strong>B:</strong> 250 – 350 cc</li>
+          <li><strong>C:</strong> 350 – 450 cc</li>
+          <li><strong>D:</strong> 450 – 550 cc</li>
+          <li><strong>DD:</strong> 550 – 700 cc</li>
+          <li><strong>DDD/F:</strong> 700 – 850 cc</li>
+          <li><strong>G:</strong> 850 – 1000 cc</li>
+          <li><strong>H:</strong> 1000 – 1200 cc</li>
+          <li><strong>I+:</strong> 1200+ cc</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>📐 Band Size Impact</h3>
+        <p>The same cup letter can have different volumes at different band sizes. A 34C has a smaller volume than a 38C because the circumference is larger.</p>
+        <p><strong>Example:</strong> 32D ≈ 34C ≈ 36B (sister sizes – same volume, different band).</p>
+      </div>
+    </div>
+
+    <h2>Uses for Breast Volume Information</h2>
+    <ul style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>💉 Plastic Surgery:</strong> Estimating implant size for augmentation or reduction.</li>
+      <li><strong>👙 Custom Bra Fitting:</strong> Understanding volume helps with custom bras and prosthetics.</li>
+      <li><strong>📈 Body Composition:</strong> Tracking changes in breast tissue over time.</li>
+      <li><strong>🧪 Research:</strong> Used in anthropometric studies and clinical research.</li>
+    </ul>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Need to find your bra size first?</p>
+      <a href="/bra-size-calculator" class="btn btn-primary">Use the Bra Size Calculator</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>How accurate is this breast volume calculator?</summary>
+        <p>This is an <strong>estimate</strong> based on bra size. Actual volume varies by breast shape, density, and individual anatomy. For medical decisions, always consult a professional.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between cc and ml?</summary>
+        <p>One cubic centimeter (cc) equals one milliliter (ml). They are the same measurement – interchangeable in most contexts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use this for implant sizing?</summary>
+        <p>This tool provides a general estimate. Implant sizing depends on individual anatomy, desired outcome, and surgeon recommendations. Always consult a board-certified plastic surgeon.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+
+  let currentUnit = 'in';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function calculateVolume() {
+    const band = getNum('bandInput');
+    const cup = document.getElementById('cupInput').value;
+
+    if (!band || band < 28 || band > 56) {
+      alert('Please enter a valid band size (28–56).');
+      return;
+    }
+
+    // Find cup index
+    let cupIdx = US_CUPS.indexOf(cup);
+    if (cupIdx === -1) cupIdx = 2; // default to C
+
+    // Base volume per cup size (approximately)
+    const baseVolumes = {
+      'AA': 120,
+      'A': 190,
+      'B': 270,
+      'C': 380,
+      'D': 490,
+      'DD': 600,
+      'DDD': 720,
+      'G': 850,
+      'H': 980,
+      'I': 1120,
+      'J': 1280,
+      'K': 1450,
+      'L': 1650,
+      'M': 1850,
+      'N': 2100
+    };
+
+    // Base volume for this cup
+    let volume = baseVolumes[cup] || 380;
+
+    // Adjust for band size (larger band = slightly larger volume for same cup)
+    // Reference band: 34
+    const bandAdjustment = (band - 34) * 12;
+    volume = Math.round(volume + bandAdjustment);
+
+    // Ensure minimum volume
+    if (volume < 50) volume = 50;
+
+    // Also calculate per breast (single breast volume)
+    const perBreast = Math.round(volume / 2);
+
+    document.getElementById('volumeResult').textContent = `${volume} cc (${perBreast} cc per breast)`;
+    document.getElementById('resultNote').textContent = `Estimated total breast volume for ${band}${cup}: ${volume} cc (${perBreast} cc per side). Based on your bra size.`;
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+
+    const inputs = ['bandInput', 'cupInput'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function() {
+          if (document.getElementById('resultsCard').classList.contains('show')) {
+            calculateVolume();
+          }
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,315 @@
+---
+layout: default
+title: Men's & MTF Bra Calculator – Inclusive Sizing | IMRango
+description: A respectful, inclusive bra size calculator for men, transgender women, non-binary individuals, and anyone with a different chest shape. Find your comfortable size with gentle guidance.
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Men's &amp; MTF Bra Calculator – Inclusive Sizing</h1>
+      <p>Bra sizing for everyone – including men with gynecomastia, transgender women, non-binary individuals, and anyone who needs chest support. Enter your measurements and find a comfortable, affirming size. Compare US, UK, EU, AU, and FR sizing.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Inclusive Bra Size Finder</h2>
+      </div>
+
+      <!-- Unit Toggle Only -->
+      <div class="form-grid" style="grid-template-columns: 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust / Chest (Snug)</label>
+            <div class="field-input">
+              <input type="number" id="underbust" step="0.1" value="38" placeholder="e.g. 38">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure snugly around your chest, just under the bust/chest area. Men often have wider ribcages – this is normal.</p>
+          </div>
+          <div class="field">
+            <label for="bust">Full Chest (Standing)</label>
+            <div class="field-input">
+              <input type="number" id="bust" step="0.1" value="42" placeholder="e.g. 42">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your chest. Keep the tape level and don't pull it tight.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateMensBra()" style="margin-top:6px;">Find My Inclusive Size</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">38B</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">38B</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">38B</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">85B</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">16B</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">100B</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <p id="mensAdvice" style="margin-top:6px; color:var(--wine); font-weight:600; font-size:15px;"></p>
+        <div id="sisterChipsContainer" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+        <p class="tool-note" style="margin-top:12px;">Need a different method? Try the <a href="/bra-size-calculator">Standard Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Bra Sizing for Everyone</h2>
+    <p>Bra sizing isn't just for one body type. Many people wear bras for different reasons:</p>
+    <ul style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Gynecomastia:</strong> Enlarged breast tissue in men, causing discomfort or self-consciousness. A supportive bra can provide comfort and shape.</li>
+      <li><strong>Transgender Women (MTF):</strong> Hormone therapy may cause breast development. A well-fitting bra offers comfort and affirmation.</li>
+      <li><strong>Non-Binary / Gender Diverse:</strong> Anyone seeking chest support or gender-affirming undergarments.</li>
+      <li><strong>Men with broader chests:</strong> Some men find compression or support bras helpful for sports, back support, or personal comfort.</li>
+    </ul>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>💜 Remember:</strong> There is no "right" or "wrong" reason to wear a bra. Your comfort and confidence matter. This calculator is here to help you find a size that works for you.
+    </div>
+
+    <h2>How to Measure for an Inclusive Bra</h2>
+    <p>Measuring for a bra when you have a different chest shape is very similar to standard measuring – with a few considerations:</p>
+    <ol style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Underbust / Chest:</strong> Wrap the tape snugly around your chest just below the bust area (or where you'd want the band to sit). Men and broader chests may need to size up in the band – our calculator adjusts for that.</li>
+      <li><strong>Full Chest:</strong> Measure around the fullest part of your chest – typically across the nipples or the widest point. Keep the tape level and don't compress tissue.</li>
+      <li><strong>Enter your numbers:</strong> Input them into the calculator above. We'll suggest a size that balances comfort and support.</li>
+    </ol>
+
+    <h2>Style Recommendations</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>👕 Compression Bras</h3>
+        <p>Flatten the chest – good for gynecomastia or those who prefer a flatter look. Often wire-free and available in neutral colours.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🩱 Soft Bralettes</h3>
+        <p>Gentle support without underwire. Great for everyday comfort and light support. Many brands offer inclusive sizing.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🏃 Sports Bras</h3>
+        <p>Designed for movement – excellent for active individuals. High-impact styles offer maximum support.</p>
+      </div>
+      <div class="guide-card">
+        <h3>💗 Gender-Affirming Bras</h3>
+        <p>Lace, satin, or cotton – choose what feels affirming. Many brands now offer gender-inclusive collections.</p>
+      </div>
+    </div>
+
+    <h2>Size Guide for Inclusive Sizing</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>US</th><th>UK</th><th>EU</th><th>AU</th><th>FR</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>38B</td><td>38B</td><td>85B</td><td>16B</td><td>100B</td></tr>
+          <tr><td>40C</td><td>40C</td><td>90C</td><td>18C</td><td>105C</td></tr>
+          <tr><td>42D</td><td>42D</td><td>95D</td><td>20D</td><td>110D</td></tr>
+          <tr><td>44DD</td><td>44DD</td><td>100DD</td><td>22DD</td><td>115DD</td></tr>
+          <tr><td>46E</td><td>46E</td><td>105E</td><td>24E</td><td>120E</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft);">* These are general starting points. Comfort is key – try different styles and sizes.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Looking for something specific?</p>
+      <a href="/sister-size-calculator" class="btn btn-primary">Try the Sister Size Calculator</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>Is it normal for men to wear bras?</summary>
+        <p>Yes! Many men wear bras for gynecomastia, support, or personal comfort. There's no shame in wearing what makes you feel comfortable and confident.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I don't want a feminine style?</summary>
+        <p>Many brands offer compression and sports bras in neutral colours and simple designs. You can also find gender-neutral options that focus on function over fashion.</p>
+      </details>
+      <details class="faq-item">
+        <summary>My chest is broad – will a bra fit?</summary>
+        <p>Many brands now offer larger band sizes (up to 56+) and cups designed for broader chests. Our calculator starts at 38 band and goes up to 56, with cup sizes A–DD for inclusive fitting.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements. Your privacy matters.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions (limited to A-DD for men's range)
+  const US_CUPS = ['A', 'B', 'C', 'D', 'DD'];
+  const UK_CUPS = ['A', 'B', 'C', 'D', 'DD'];
+  const EU_CUPS = ['A', 'B', 'C', 'D', 'E'];
+  const AU_CUPS = ['A', 'B', 'C', 'D', 'DD'];
+  const FR_CUPS = ['A', 'B', 'C', 'D', 'E'];
+
+  let currentUnit = 'in';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+
+    document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el.value) {
+        const val = parseFloat(el.value);
+        el.value = unit === 'cm' ? Math.round(val * 2.54 * 10) / 10 : Math.round((val / 2.54) * 10) / 10;
+      }
+      el.placeholder = unit === 'cm' ? 'e.g. 96' : 'e.g. 38';
+    });
+
+    if (document.getElementById('resultsCard').classList.contains('show')) {
+      calculateMensBra();
+    }
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function toInches(val, unit) {
+    return unit === 'cm' ? val / 2.54 : val;
+  }
+
+  function calculateMensBra() {
+    const unit = currentUnit;
+
+    let ub = toInches(getNum('underbust'), unit);
+    let bust = toInches(getNum('bust'), unit);
+
+    if (ub <= 0 || bust <= 0) {
+      alert('Please enter valid underbust and bust measurements.');
+      return;
+    }
+
+    // For men/broader chests: band is underbust rounded to even, but we start at 38
+    let roundedUb = Math.round(ub);
+    let bandInches = (roundedUb % 2 === 0) ? roundedUb : roundedUb + 1;
+    if (bandInches < 38) bandInches = 38;
+    if (bandInches > 56) bandInches = 56;
+
+    // Calculate cup difference – for men, we assume less difference; we also cap at DD
+    let diff = bust - bandInches;
+    let cupIdx = Math.round(diff);
+    if (cupIdx < 0) cupIdx = 0;
+    if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+    // Regional sizes
+    const usCup = US_CUPS[cupIdx];
+    const ukCup = UK_CUPS[cupIdx];
+    const euCup = EU_CUPS[cupIdx];
+    const auCup = AU_CUPS[cupIdx];
+    const frCup = FR_CUPS[cupIdx];
+
+    const usBand = bandInches;
+    const ukBand = bandInches;
+    const euBand = Math.round((bandInches - 32) * 2.5 + 70);
+    const auBand = bandInches - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    // Inclusive advice
+    let advice = '';
+    if (cupIdx <= 1) {
+      advice = 'For lighter support, try soft bralettes or compression bras. They provide comfort without shaping.';
+    } else if (cupIdx <= 3) {
+      advice = 'For moderate support, look for wire-free bras or sports bras with adjustable straps. Consider encapsulation styles for comfort.';
+    } else {
+      advice = 'For fuller support, look for bras with wide straps and a firm band. Sports bras with high impact support may be your best option.';
+    }
+
+    document.getElementById('resultNote').textContent = `Your inclusive size: ${usBand}${usCup} (US) / ${ukBand}${ukCup} (UK) – this is a comfortable starting point.`;
+    document.getElementById('mensAdvice').textContent = advice;
+
+    // Render sister sizes
+    renderSisterSizes(usBand, cupIdx);
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  function renderSisterSizes(usBand, cupIdx) {
+    const container = document.getElementById('sisterChipsContainer');
+    let chips = [];
+
+    if (cupIdx < US_CUPS.length - 1 && usBand - 2 >= 38) {
+      chips.push({ type: 'Tighter Band', size: `${usBand - 2}${US_CUPS[cupIdx + 1]}` });
+    }
+
+    if (cupIdx > 0 && usBand + 2 <= 56) {
+      chips.push({ type: 'Looser Band', size: `${usBand + 2}${US_CUPS[cupIdx - 1]}` });
+    }
+
+    if (chips.length === 0) {
+      container.innerHTML = '<span style="font-size:13px; color:var(--ink-soft);">No sister sizes found for this range. That\'s okay – try different styles for the best fit.</span>';
+    } else {
+      container.innerHTML = chips.map(c =>
+        `<span class="tag tag-core" style="background:var(--paper-2); color:var(--ink); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">${c.size} <small style="font-weight:400; color:var(--ink-soft);">(${c.type})</small></span>`
+      ).join('');
+    }
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function() {
+          if (document.getElementById('resultsCard').classList.contains('show')) {
+            calculateMensBra();
+          }
+        });
+      }
+    });
+  });
+</script>

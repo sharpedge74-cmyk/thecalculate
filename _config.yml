@@ -1,0 +1,46 @@
+# Site Settings
+title: "IM Rango"
+description: "Free Bra & Cup Size Calculators (US/UK/EU) – Calculate your exact bra size in seconds."
+permalink: ':title'
+baseurl: "/"
+url: "https://iamrango.com"  # the base hostname & protocol for your site
+site-twitter: "/"
+image: "/assets/img/og-home.jpg"
+
+# Author Settings
+author: "IM Rango"
+author-img: "assets/img/author.png"
+about-author: "Sizing tools and guides for the perfect fit."
+social-twitter: "/"
+social-facebook: "/"
+social-github: "sareesali"
+social-linkedin: "/"
+social-email: "/"
+
+# Disqus
+discus-identifier: "iamrango"
+
+# Tracker
+analytics: "/"
+
+# Build Settings
+markdown: kramdown
+kramdown:
+  input: Kramdown
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+  - jekyll-toc
+  - jekyll-livereload
+  - jekyll-redirect-from
+
+toc:
+  min_level: 2
+  max_level: 6
+  list_class: toc
+  list_class: toc__list
+  sublist_class: toc__sublist
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "generate_jekyll_site.py"]

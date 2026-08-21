@@ -1,0 +1,359 @@
+---
+layout: default
+title: Maternity & Nursing Bra Calculator – Find Your Size | IMRango
+description: Get the right maternity or nursing bra size for your changing body. Enter your measurements and trimester for comfortable support during pregnancy and postpartum.
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Maternity &amp; Nursing Bra Calculator</h1>
+      <p>Pregnancy and nursing change your body. Enter your measurements and stage to get a comfortable, supportive bra size for your changing shape. Compare US, UK, EU, AU, and FR sizing.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Maternity & Nursing Bra Finder</h2>
+      </div>
+
+      <!-- Unit Toggle Only -->
+      <div class="form-grid" style="grid-template-columns: 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust (Snug)</label>
+            <div class="field-input">
+              <input type="number" id="underbust" step="0.1" value="34" placeholder="e.g. 34">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure snugly under your bust – maternity bras should be comfortable but supportive.</p>
+          </div>
+          <div class="field">
+            <label for="bust">Full Bust (Standing)</label>
+            <div class="field-input">
+              <input type="number" id="bust" step="0.1" value="40" placeholder="e.g. 40">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your chest – don't compress tissue.</p>
+          </div>
+        </div>
+
+        <!-- Stage/Trimester Selector -->
+        <div class="field" style="margin-top:16px;">
+          <label for="stage">Pregnancy / Nursing Stage</label>
+          <select id="stage" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+            <option value="first">First Trimester (1-12 weeks)</option>
+            <option value="second" selected>Second Trimester (13-27 weeks)</option>
+            <option value="third">Third Trimester (28-40 weeks)</option>
+            <option value="nursing">Nursing / Postpartum</option>
+          </select>
+          <p class="field-hint">Select your current stage – this helps recommend the right style and support level.</p>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateMaternity()" style="margin-top:6px;">Find My Maternity Size</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">34D</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">34D</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">34D</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">75D</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">12D</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">90D</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <p id="maternityAdvice" style="margin-top:6px; color:var(--wine); font-weight:600; font-size:15px;"></p>
+        <div id="sisterChipsContainer" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+        <p class="tool-note" style="margin-top:12px;">Need a different method? Try the <a href="/bra-size-calculator">Standard Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Why Maternity & Nursing Bras Are Different</h2>
+    <p>During pregnancy and nursing, your breasts change significantly. They become larger, heavier, and more sensitive. A good maternity or nursing bra provides:</p>
+    <ul style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Support without underwire</strong> – underwire can compress milk ducts and cause discomfort.</li>
+      <li><strong>Extra cup room</strong> – your breasts grow during pregnancy and engorge during nursing.</li>
+      <li><strong>Easy nursing access</strong> – clip-down cups or drop cups for feeding.</li>
+      <li><strong>Soft, breathable fabric</strong> – cotton blends reduce irritation.</li>
+    </ul>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>Key tip:</strong> Your bra size changes throughout pregnancy. Don't buy too many bras in one size – you may need to re-measure every trimester. Our calculator helps you find your current size.
+    </div>
+
+    <h2>How to Measure for a Maternity Bra</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>📏 1. Underbust (Band)</h3>
+        <p>Wrap the tape snugly around your ribcage, just under your bust. Take the measurement after you exhale. Maternity bands should be comfortable – not too tight.</p>
+        <p><strong>Tip:</strong> Consider going up one band size for later pregnancy.</p>
+      </div>
+      <div class="guide-card">
+        <h3>📐 2. Bust (Cup)</h3>
+        <p>Measure around the fullest part of your bust – usually across the nipples. Keep the tape level and don't pull it tight. This gives you your cup letter.</p>
+        <p><strong>Tip:</strong> Size up in the cup for nursing – milk production can increase volume.</p>
+      </div>
+    </div>
+
+    <h2>Stage-by-Stage Guide</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>🤰 First Trimester</h3>
+        <p>Breasts may feel tender and start growing. Look for soft, wire-free bras with adjustable straps. Stick to your usual size or go up one cup.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🤱 Second Trimester</h3>
+        <p>Significant growth. Look for maternity bras with extra cup room, wide straps, and multiple hook rows. You may need to size up in both band and cup.</p>
+      </div>
+      <div class="guide-card">
+        <h3>👶 Third Trimester</h3>
+        <p>Full growth – breasts are at their largest. Look for nursing bras with easy access clips. Size up in the cup and band for comfort.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🍼 Nursing/Postpartum</h3>
+        <p>Breasts can fluctuate in size between feedings. Look for stretchy cups that accommodate changes, with drop-down or clip access for feeding.</p>
+      </div>
+    </div>
+
+    <h2>Maternity Bra Size Guide</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Your Size</th><th>First Trimester</th><th>Second Trimester</th><th>Third Trimester</th><th>Nursing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>34B</td><td>34B</td><td>34C</td><td>34D</td><td>34D</td></tr>
+          <tr><td>34C</td><td>34C</td><td>34D</td><td>34DD</td><td>34DD</td></tr>
+          <tr><td>34D</td><td>34D</td><td>34DD</td><td>36DD</td><td>36DD</td></tr>
+          <tr><td>36C</td><td>36C</td><td>36D</td><td>36DD</td><td>36DD</td></tr>
+          <tr><td>36D</td><td>36D</td><td>36DD</td><td>38DD</td><td>38DD</td></tr>
+          <tr><td>38C</td><td>38C</td><td>38D</td><td>38DD</td><td>38DD</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft);">* These are general recommendations – individual changes vary. Always try on before buying.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Looking for sister sizes?</p>
+      <a href="/sister-size-calculator" class="btn btn-primary">Try the Sister Size Calculator</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>Should I size up in maternity bras?</summary>
+        <p>Most women go up 1-2 cup sizes during pregnancy and nursing. Your band may also increase due to ribcage expansion. Measure every trimester for the best fit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between maternity and nursing bras?</summary>
+        <p>Maternity bras are designed for pregnancy – soft, supportive, and wire-free. Nursing bras have the same features but also include clips or drops for easy breast access during feeding.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I wear underwire during pregnancy?</summary>
+        <p>Most experts recommend avoiding underwire during pregnancy and nursing as it can compress milk ducts and cause discomfort or mastitis. Choose wire-free styles for comfort.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ'];
+  const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const AU_CUPS = UK_CUPS;
+  const FR_CUPS = EU_CUPS;
+
+  let currentUnit = 'in';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+
+    document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el.value) {
+        const val = parseFloat(el.value);
+        el.value = unit === 'cm' ? Math.round(val * 2.54 * 10) / 10 : Math.round((val / 2.54) * 10) / 10;
+      }
+      el.placeholder = unit === 'cm' ? 'e.g. 86' : 'e.g. 34';
+    });
+
+    if (document.getElementById('resultsCard').classList.contains('show')) {
+      calculateMaternity();
+    }
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function toInches(val, unit) {
+    return unit === 'cm' ? val / 2.54 : val;
+  }
+
+  function calculateMaternity() {
+    const unit = currentUnit;
+    const stage = document.getElementById('stage').value;
+
+    let ub = toInches(getNum('underbust'), unit);
+    let bust = toInches(getNum('bust'), unit);
+
+    if (ub <= 0 || bust <= 0) {
+      alert('Please enter valid underbust and bust measurements.');
+      return;
+    }
+
+    // Maternity-specific adjustments based on stage
+    let bandOffset = 0;
+    let cupOffset = 0;
+
+    if (stage === 'first') {
+      bandOffset = 0;
+      cupOffset = 0;
+    } else if (stage === 'second') {
+      bandOffset = 0;
+      cupOffset = 1;
+    } else if (stage === 'third') {
+      bandOffset = 1;
+      cupOffset = 2;
+    } else if (stage === 'nursing') {
+      bandOffset = 0;
+      cupOffset = 1;
+    }
+
+    // Calculate band
+    let roundedUb = Math.round(ub);
+    let bandInches = (roundedUb % 2 === 0) ? roundedUb : roundedUb + 1;
+    bandInches = bandInches + bandOffset;
+    if (bandInches < 28) bandInches = 28;
+    if (bandInches > 56) bandInches = 56;
+
+    // Calculate cup
+    let diff = bust - bandInches + cupOffset;
+    let cupIdx = Math.round(diff);
+    if (cupIdx < 0) cupIdx = 0;
+    if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+    // Regional sizes
+    const usCup = US_CUPS[cupIdx];
+    const ukCup = UK_CUPS[cupIdx];
+    const euCup = EU_CUPS[cupIdx];
+    const auCup = AU_CUPS[cupIdx];
+    const frCup = FR_CUPS[cupIdx];
+
+    const usBand = bandInches;
+    const ukBand = bandInches;
+    const euBand = Math.round((bandInches - 32) * 2.5 + 70);
+    const auBand = bandInches - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    // Stage-specific advice
+    const stageNames = {
+      'first': 'First Trimester (1-12 weeks)',
+      'second': 'Second Trimester (13-27 weeks)',
+      'third': 'Third Trimester (28-40 weeks)',
+      'nursing': 'Nursing / Postpartum'
+    };
+
+    const adviceMessages = {
+      'first': 'First trimester: Look for soft, wire-free bras with adjustable straps. Stick to your usual size or go up one cup. Avoid underwire.',
+      'second': 'Second trimester: You may need to size up in the cup. Look for maternity bras with extra cup room, wide straps, and multiple hook rows.',
+      'third': 'Third trimester: Size up in both band and cup. Look for nursing bras with easy access clips. Choose soft, supportive fabrics.',
+      'nursing': 'Nursing: Choose bras with drop cups or clips for easy feeding. Look for stretchy cups that accommodate changing breast size between feedings.'
+    };
+
+    document.getElementById('resultNote').textContent = `Your maternity/nursing size for ${stageNames[stage]}: ${usBand}${usCup} (US) / ${ukBand}${ukCup} (UK)`;
+    document.getElementById('maternityAdvice').textContent = adviceMessages[stage];
+
+    // Render sister sizes
+    renderSisterSizes(usBand, cupIdx);
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  function renderSisterSizes(usBand, cupIdx) {
+    const container = document.getElementById('sisterChipsContainer');
+    let chips = [];
+
+    if (cupIdx < US_CUPS.length - 1 && usBand - 2 >= 28) {
+      chips.push({ type: 'Tighter Band', size: `${usBand - 2}${US_CUPS[cupIdx + 1]}` });
+    }
+
+    if (cupIdx > 0 && usBand + 2 <= 56) {
+      chips.push({ type: 'Looser Band', size: `${usBand + 2}${US_CUPS[cupIdx - 1]}` });
+    }
+
+    if (chips.length === 0) {
+      container.innerHTML = '<span style="font-size:13px; color:var(--ink-soft);">No sister sizes found for this range.</span>';
+    } else {
+      container.innerHTML = chips.map(c =>
+        `<span class="tag tag-core" style="background:var(--paper-2); color:var(--ink); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">${c.size} <small style="font-weight:400; color:var(--ink-soft);">(${c.type})</small></span>`
+      ).join('');
+    }
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+
+    const inputs = ['underbust', 'bust', 'stage'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function() {
+          if (document.getElementById('resultsCard').classList.contains('show')) {
+            calculateMaternity();
+          }
+        });
+      }
+    });
+  });
+</script>

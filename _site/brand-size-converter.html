@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Size Converter – US, UK, EU, AU, FR | IMRango – IM Rango</title>
+<meta name="description" content="Convert your bra size between US, UK, EU, AU, and FR systems. Compare Victoria's Secret, Wacoal, ThirdLove, M&S, and Skims sizing.">
+<link rel="canonical" href="http://localhost:4000/brand-size-converter">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+  <div class="container nav-row" style="position:relative;">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
+        Calculators <span class="nav-caret"></span>
+      </button>
+      <a class="nav-link" href="/bra-measurement-chart">Bra Measurement Chart</a>
+      <a class="nav-link" href="/about">About</a>
+    </nav>
+
+    <a href="#calculator" class="btn btn-primary nav-cta">Try the Calculator</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop mega menu -->
+    <div class="mega" id="megaMenu" role="region" aria-label="Calculators menu">
+      <div class="mega-grid">
+        <div class="mega-col">
+          <h4>Core Calculators</h4>
+          <a href="/bra-size-calculator">Bra Size Calculator<small>Band + bust, the standard method</small></a>
+          <a href="/cup-size-calculator">Cup Size Calculator<small>Just the cup, from a known band</small></a>
+          <a href="/bust-size-calculator">Bust Size Calculator<small>Convert a single bust measurement</small></a>
+          <a href="/band-size-calculator">Band Size Calculator<small>Check your band size alone</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Conversion Tools</h4>
+          <a href="/bra-size-conversion">Bra Size Conversion<small>US · UK · EU · AU · JP</small></a>
+          <a href="/sister-size-calculator">Sister Size Calculator<small>Same volume, different band</small></a>
+          <a href="/brand-size-converter">Brand Size Converter<small>Map your size to a brand chart</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Specialty Calculators</h4>
+          <a href="/abtf-calculator">ABTF Calculator<small>The 3-measurement method</small></a>
+          <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Fit for compression & encapsulation</small></a>
+          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band & cup range</small></a>
+          <a href="/maternity-bra-size-calculator">Maternity & Nursing<small>For a changing body</small></a>
+        </div>
+        <div class="mega-col">
+          <div>
+            <h4>Guides</h4>
+            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+            <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+            <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+            <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+    <button class="hamburger" id="closeMobileNav" aria-label="Close menu">✕</button>
+  </div>
+  <details class="mobile-accordion" open>
+    <summary>Core Calculators</summary>
+    <div class="mega-col">
+      <a href="/bra-size-calculator">Bra Size Calculator</a>
+      <a href="/cup-size-calculator">Cup Size Calculator</a>
+      <a href="/bust-size-calculator">Bust Size Calculator</a>
+      <a href="/band-size-calculator">Band Size Calculator</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Conversion Tools</summary>
+    <div class="mega-col">
+      <a href="/bra-size-conversion">Bra Size Conversion</a>
+      <a href="/sister-size-calculator">Sister Size Calculator</a>
+      <a href="/brand-size-converter">Brand Size Converter</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Specialty Calculators</summary>
+    <div class="mega-col">
+      <a href="/abtf-calculator">ABTF Calculator</a>
+      <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+      <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+      <a href="/maternity-bra-size-calculator">Maternity & Nursing</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Guides</summary>
+    <div class="mega-col">
+      <div>
+        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+        <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      </div>
+    </div>
+  </details>
+  <a class="nav-link" href="/bra-measurement-chart" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">Bra Measurement Chart</a>
+  <a href="/about" class="nav-link" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">About</a>
+</div>
+
+  <div class="ruler" aria-hidden="true"></div>
+  <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+<div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Brand Size Converter – Map Your Size to Any Brand</h1>
+      <p>Different brands fit differently. Enter your size and select a brand to see the equivalent size for Victoria's Secret, Wacoal, ThirdLove, Marks & Spencer, Skims, and more. Compare US, UK, EU, AU, and FR sizing instantly.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Brand Size Converter</h2>
+      </div>
+
+      <!-- Config Bar -->
+      <div class="form-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom:18px;">
+        <div class="field">
+          <label for="unitSelect">Unit System</label>
+          <select id="unitSelect" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+            <option value="in">Inches (in)</option>
+            <option value="cm">Centimeters (cm)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="regionSelect">Target Region</label>
+          <select id="regionSelect" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+            <option value="us">United States (US)</option>
+            <option value="uk">United Kingdom (UK)</option>
+            <option value="eu">Europe (EU)</option>
+            <option value="au">Australia (AU)</option>
+            <option value="fr">France / Spain (FR)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="form-grid">
+        <div class="field">
+          <label for="bandInput">Your band number</label>
+          <div class="field-input">
+            <input type="number" id="bandInput" step="1" value="34" placeholder="e.g. 34">
+            <span class="unit-suffix">band</span>
+          </div>
+          <p class="field-hint">Enter your current band size.</p>
+        </div>
+        <div class="field">
+          <label for="cupInput">Your cup letter</label>
+          <select id="cupInput" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+            <option value="AA">AA</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C" selected>C</option>
+            <option value="D">D</option>
+            <option value="DD">DD</option>
+            <option value="DDD">DDD</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+          </select>
+          <p class="field-hint">Select your current cup letter.</p>
+        </div>
+      </div>
+
+      <!-- Brand Select -->
+      <div class="field" style="margin-top:16px;">
+        <label for="brandSelect">Choose a brand</label>
+        <select id="brandSelect" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+          <option value="standard">Standard Modern Sizing</option>
+          <option value="victoria">Victoria's Secret (+4 Method)</option>
+          <option value="wacoal">Wacoal Fitting</option>
+          <option value="thirdlove">ThirdLove Half-Cups</option>
+          <option value="marks">Marks & Spencer (M&S)</option>
+          <option value="skims">Skims / Aerie Sizing</option>
+        </select>
+        <p class="field-hint">Each brand has its own fit – we'll map your size accordingly.</p>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="convertBrandSize()" style="margin-top:16px;">Convert My Size</button>
+
+      <!-- Results -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">34C</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">34C</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">34C</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">75C</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">12C</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">90C</span></div>
+        </div>
+        <p id="brandAdvice" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <p id="brandExplanation" style="margin-top:4px; color:var(--ink-soft); font-size:13px; font-style:italic;"></p>
+        <p class="tool-note" style="margin-top:12px;">Need to find your original size? Try the <a href="/bra-size-calculator">Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Why Brand Sizing Differs</h2>
+    <p>Not all bras fit the same way. A 34C from Victoria's Secret might feel different from a 34C from Wacoal or Panache. Each brand uses its own fit model and size chart – that's why your size can change between brands.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Victoria's Secret (+4 Method)</h3>
+        <p>Adds 4-5 inches to your underbust for band size. Known for looser bands and smaller cup letters.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Wacoal Fitting</h3>
+        <p>Similar to Victoria's Secret, adds 4-5 inches to underbust. Recommended for fuller figures.</p>
+      </div>
+      <div class="guide-card">
+        <h3>ThirdLove Half-Cups</h3>
+        <p>Modern snug band with half-cup options. Size up one cup for best fit.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Marks & Spencer (M&S)</h3>
+        <p>UK standard sizing. True to UK size chart.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Skims Compressive Fit</h3>
+        <p>Exact underbust measurement (no rounding). Size up one cup for compressive fabrics.</p>
+      </div>
+    </div>
+
+    <h2>How to Use This Tool</h2>
+    <ol style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li>Enter your <strong>current band number</strong> (e.g., 34).</li>
+      <li>Select your <strong>current cup letter</strong> (e.g., C).</li>
+      <li>Choose a <strong>brand</strong> from the dropdown.</li>
+      <li>Click "Convert My Size" – we'll show you the equivalent size for that brand.</li>
+    </ol>
+
+    <h2>Brand Conversion Chart</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Your Size</th><th>Victoria's Secret</th><th>Wacoal</th><th>ThirdLove</th><th>M&S</th><th>Skims</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>32A</td><td>36A</td><td>36A</td><td>32B</td><td>32A</td><td>32B</td></tr>
+          <tr><td>34B</td><td>38B</td><td>38B</td><td>34C</td><td>34B</td><td>34C</td></tr>
+          <tr><td>34C</td><td>38C</td><td>38C</td><td>34D</td><td>34C</td><td>34D</td></tr>
+          <tr><td>34D</td><td>38D</td><td>38D</td><td>34DD</td><td>34D</td><td>34DD</td></tr>
+          <tr><td>34DD</td><td>38DD</td><td>38DD</td><td>34DDD</td><td>34DD</td><td>34DDD</td></tr>
+          <tr><td>34DDD</td><td>38DDD</td><td>38DDD</td><td>34G</td><td>34E</td><td>34G</td></tr>
+          <tr><td>34G</td><td>38G</td><td>38G</td><td>34H</td><td>34F</td><td>34H</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft);">* Approximate conversions. Always check the brand's official size chart.</p>
+
+    <h2>Understanding Brand Fitting Differences</h2>
+    <p>Each brand designs bras with a different "fit model" – a specific body type they use as a reference. This affects how their bras fit real bodies:</p>
+    <ul>
+      <li><strong>Victoria's Secret:</strong> Uses +4 method, resulting in looser bands and smaller cups. If you prefer a snug fit, size down in the band.</li>
+      <li><strong>Wacoal:</strong> Similar to VS but designed for fuller figures. Their bands run true to +4 method.</li>
+      <li><strong>ThirdLove:</strong> Modern snug fit with half-cup options. Size up one cup for the best fit.</li>
+      <li><strong>Marks & Spencer:</strong> UK standard sizing. True to UK size chart.</li>
+      <li><strong>Skims:</strong> Compressive fabrics mean you may need to size up in the cup. Band runs true to size.</li>
+    </ul>
+
+    <h2>Why Your Size Might Change Between Brands</h2>
+    <p>It's normal to wear different sizes in different brands. A 34C in one brand might be a 32D in another. This is because:</p>
+    <ul>
+      <li>Each brand has its own fit model and measurements.</li>
+      <li>Fabric and construction affect how a bra fits.</li>
+      <li>Style differences (push-up, minimizer, full coverage, etc.) change the fit.</li>
+    </ul>
+    <p>Always try on a few sizes when trying a new brand – and use this converter as a starting point.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Need to find your original size?</p>
+      <a href="/bra-size-calculator" class="btn btn-primary">Use the Bra Size Calculator</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>Why does Victoria's Secret size differently from other brands?</summary>
+        <p>Victoria's Secret traditionally uses the +4 method – they add 4 inches to your underbust measurement to get the band size. This results in a looser band and smaller cup letter compared to modern snug fitting.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which brand sizing is most accurate?</summary>
+        <p>Modern snug fitting (used by ThirdLove, Wacoal, and most UK brands) is generally considered more accurate for support. However, the "best" size depends on your body and preference – use this converter to find your size for each brand.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I convert between US and UK sizing?</summary>
+        <p>Yes! US and UK bands are the same (34 is 34 in both systems), but cups differ from DD up. US DDD = UK E, US G = UK F, US H = UK FF. This converter handles all that automatically.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is Skims sizing different?</summary>
+        <p>Yes. Skims uses compressive fabrics that hug the body. We recommend sizing up one cup for a comfortable fit. The band runs true to size – no +4 method.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD/F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ'];
+  const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const AU_CUPS = UK_CUPS;
+  const FR_CUPS = EU_CUPS;
+
+  // Brand mapping: bandOffset, cupOffset (positive = size up)
+  const brandMappings = {
+    'standard': { name: 'Standard Modern', bandOffset: 0, cupOffset: 0, advice: 'Standard snug fitting.' },
+    'victoria': { name: "Victoria's Secret", bandOffset: 4, cupOffset: 0, advice: 'VS uses +4 method. Band size increased by 4 inches.' },
+    'wacoal': { name: 'Wacoal', bandOffset: 4, cupOffset: 0, advice: 'Wacoal uses +4 method like VS.' },
+    'thirdlove': { name: 'ThirdLove', bandOffset: 0, cupOffset: 1, advice: 'ThirdLove half-cup system – size up one cup.' },
+    'marks': { name: 'Marks & Spencer', bandOffset: 0, cupOffset: 0, advice: 'M&S uses standard UK sizing.' },
+    'skims': { name: 'Skims', bandOffset: 0, cupOffset: 1, advice: 'Skims compressive fabric – size up one cup.' }
+  };
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function convertBrandSize() {
+    const unit = document.getElementById('unitSelect').value;
+    const region = document.getElementById('regionSelect').value;
+    const brandKey = document.getElementById('brandSelect').value;
+
+    const band = getNum('bandInput');
+    const cup = document.getElementById('cupInput').value;
+
+    if (!band || band < 20 || band > 60) {
+      alert('Please enter a valid band number (20–60).');
+      return;
+    }
+
+    const brand = brandMappings[brandKey];
+
+    // Convert band to inches if needed
+    let bandInches = unit === 'cm' ? band / 2.54 : band;
+
+    // Apply band offset
+    let newBandInches = bandInches + brand.bandOffset;
+
+    // Round to nearest even number for US/UK band
+    let roundedBand = Math.round(newBandInches);
+    let newBand = (roundedBand % 2 === 0) ? roundedBand : roundedBand + 1;
+
+    // Find cup index
+    let cupIdx = US_CUPS.indexOf(cup);
+    if (cupIdx === -1) cupIdx = 0;
+
+    // Apply cup offset
+    let newCupIdx = cupIdx + brand.cupOffset;
+    newCupIdx = Math.max(0, Math.min(newCupIdx, US_CUPS.length - 1));
+
+    // Get cup letters
+    const usCup = US_CUPS[newCupIdx];
+    const ukCup = UK_CUPS[newCupIdx];
+    const euCup = EU_CUPS[newCupIdx];
+    const auCup = AU_CUPS[newCupIdx];
+    const frCup = FR_CUPS[newCupIdx];
+
+    // Regional band conversions
+    const usBand = newBand;
+    const ukBand = newBand;
+    const euBand = Math.round((newBand - 32) * 2.5 + 70);
+    const auBand = newBand - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    document.getElementById('brandAdvice').textContent = brand.advice;
+
+    // Explanation
+    let explanation = `From ${band}${cup} (${unit}) to ${newBand}${usCup} for ${brand.name}.`;
+    if (brand.bandOffset > 0) explanation += ` Band +${brand.bandOffset} inches.`;
+    if (brand.cupOffset > 0) explanation += ` Cup +${brand.cupOffset} (${cup} → ${usCup}).`;
+    document.getElementById('brandExplanation').textContent = explanation;
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+</script>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Calculators</h4>
+        <a href="/bra-size-calculator">Bra Size Calculator</a>
+        <a href="/cup-size-calculator">Cup Size Calculator</a>
+        <a href="/bust-size-calculator">Bust Size Calculator</a>
+        <a href="/bra-size-conversion">Bra Size Conversion</a>
+      </div>
+      <div>
+        <div>
+          <h4>Guides</h4>
+          <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+          <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+          <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+          <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+          <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/editorial-policy">Editorial Policy</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IM Rango. All rights reserved.</span>
+      <span>Estimates only – not a substitute for a professional fitting.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+---
+layout: default
+title: Bra Size Conversion – US, UK, EU, AU, JP | IMRango
+description: Convert your bra size between US, UK, EU, AU, and Japanese sizing. Enter your size and see the equivalent in all major systems.
+---
+
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Bra Size Conversion – US, UK, EU, AU &amp; JP</h1>
+      <p>Enter your bra size in any system and we’ll show you the equivalent in US, UK, EU, AU, and Japanese sizing. Works for band and cup – fast, free, and private.</p>
+    </div>
+
+    <!-- calculator tool -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Bra Size Converter</h2>
+      </div>
+
+      <form id="convForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="fromSystem">Convert from</label>
+            <select id="fromSystem" class="field-input" style="width:100%; padding:12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:1rem;">
+              <option value="US">US</option>
+              <option value="UK">UK</option>
+              <option value="EU">EU</option>
+              <option value="AU">AU</option>
+              <option value="JP">JP</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bandInput">Band number</label>
+            <div class="field-input">
+              <input type="number" id="bandInput" inputmode="numeric" step="1" min="20" max="60" placeholder="e.g. 34" required>
+              <span class="unit-suffix">band</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cupInput">Cup letter</label>
+          <select id="cupInput" class="field-input" style="width:100%; padding:12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:1rem;">
+            <option value="AA">AA</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="DD">DD</option>
+            <option value="DDD">DDD</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+          </select>
+          <p class="field-hint">Cup letters vary by system – we’ll convert correctly.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Convert My Size</button>
+      </form>
+
+      <div class="result-panel" id="resultPanel" aria-live="polite">
+        <div id="conversionResults" style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px;">
+          <div><strong>US:</strong> <span id="resUS">—</span></div>
+          <div><strong>UK:</strong> <span id="resUK">—</span></div>
+          <div><strong>EU:</strong> <span id="resEU">—</span></div>
+          <div><strong>AU:</strong> <span id="resAU">—</span></div>
+          <div><strong>JP:</strong> <span id="resJP">—</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:12px;">Your size converted to all major systems.</p>
+      </div>
+
+      <p class="tool-note">Need to find your original size? Try the <a href="/bra-size-calculator">Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Calculator</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EASY‑TO‑READ CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Why Bra Sizes Differ Around the World</h2>
+    <p>Bra sizes are not the same everywhere. The US, UK, EU, Australia, and Japan each have their own system. The band number and cup letter that fit you in one country might not be the same in another. That’s why you need a conversion tool – to make sure you get the right size when shopping internationally.</p>
+
+    <h2>How the Conversion Works</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Band Conversion</h3>
+        <p>The band number is based on your underbust measurement in inches (US/UK) or centimeters (EU/JP). US and UK use the same band numbers. EU and JP use centimeters – for example, US 34 = EU 75.</p>
+      </div>
+      <div class="guide-card">
+        <h3>Cup Conversion</h3>
+        <p>Cup letters differ from D upwards. US DDD = UK E, US G = UK F, and so on. Our converter handles all the tricky mappings so you don’t have to guess.</p>
+      </div>
+    </div>
+
+    <h2>Understanding Your Converted Size</h2>
+    <ul>
+      <li><strong>US</strong> – used in America and some online stores.</li>
+      <li><strong>UK</strong> – used in the UK, Australia, and many European brands. Band numbers same as US, but cup letters differ from DD up.</li>
+      <li><strong>EU</strong> – used in mainland Europe. Band numbers are in centimeters (e.g., 75).</li>
+      <li><strong>AU</strong> – follows UK sizing, but some brands use different band numbers (e.g., 12 instead of 34). Our converter uses the UK band for AU.</li>
+      <li><strong>JP</strong> – uses centimeters for band, similar to EU. Cup letters often follow US.</li>
+    </ul>
+
+    <h2>Common Conversion Mistakes</h2>
+    <p>Many people think a US 34D is the same as a UK 34D – it is, for the band, but if you’re shopping for a US DDD, that’s a UK E. Always check the system of the brand you’re buying from. Our tool takes the guesswork out.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Got your size? Now find your sister sizes.</p>
+      <a href="/sister-size-calculator" class="btn btn-primary">Try the Sister Size Calculator →</a>
+    </div>
+
+    <h2>Why Trust This Converter?</h2>
+    <ul>
+      <li><strong>Accurate</strong> – uses standard industry conversion charts.</li>
+      <li><strong>Free</strong> – no sign‑up, no charges.</li>
+      <li><strong>Private</strong> – all calculations run in your browser.</li>
+      <li><strong>Updated</strong> – we keep it in line with current brand sizing.</li>
+    </ul>
+    <p>Remember: your converted size is a great guide, but always check the brand’s specific size chart – some brands fit differently.</p>
+
+    <div class="guide-card" style="background:var(--wine); color:var(--white); text-align:center; padding:20px;">
+      <p style="font-size:1.2rem; font-weight:700;">Ready to convert your size?</p>
+      <p>Enter your size in the calculator above and see all the equivalents instantly.</p>
+      <a href="#calculator" class="btn btn-ghost" style="border-color:var(--white); color:var(--white); margin-top:12px; display:inline-block;">Go to Converter ↑</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript for conversion -->
+<script>
+  // Conversion logic
+  const cupMapping = {
+    'AA': { 'US': 'AA', 'UK': 'AA', 'EU': 'AA', 'AU': 'AA', 'JP': 'AA' },
+    'A': { 'US': 'A', 'UK': 'A', 'EU': 'A', 'AU': 'A', 'JP': 'A' },
+    'B': { 'US': 'B', 'UK': 'B', 'EU': 'B', 'AU': 'B', 'JP': 'B' },
+    'C': { 'US': 'C', 'UK': 'C', 'EU': 'C', 'AU': 'C', 'JP': 'C' },
+    'D': { 'US': 'D', 'UK': 'D', 'EU': 'D', 'AU': 'D', 'JP': 'D' },
+    'DD': { 'US': 'DD', 'UK': 'DD', 'EU': 'E', 'AU': 'DD', 'JP': 'E' },
+    'DDD': { 'US': 'DDD', 'UK': 'E', 'EU': 'F', 'AU': 'E', 'JP': 'F' },
+    'G': { 'US': 'G', 'UK': 'F', 'EU': 'G', 'AU': 'F', 'JP': 'G' },
+    'H': { 'US': 'H', 'UK': 'FF', 'EU': 'H', 'AU': 'FF', 'JP': 'H' },
+    'I': { 'US': 'I', 'UK': 'G', 'EU': 'I', 'AU': 'G', 'JP': 'I' },
+    'J': { 'US': 'J', 'UK': 'GG', 'EU': 'J', 'AU': 'GG', 'JP': 'J' }
+  };
+
+  // Band conversion: US/UK band to EU, AU, JP
+  function convertBand(usBand) {
+    // EU = (US band - 4) * 2.54 rounded to nearest 5
+    let eu = Math.round(((usBand - 4) * 2.54) / 5) * 5;
+    // AU band = US band (UK) but some brands use -22? Actually AU uses UK band, so same as US
+    let au = usBand;
+    // JP band = underbust in cm = (US band - 4) * 2.54 rounded to nearest integer
+    let jp = Math.round((usBand - 4) * 2.54);
+    return { eu, au, jp };
+  }
+
+  // From any system, convert to US band first
+  function toUSBand(system, band) {
+    if (system === 'US' || system === 'UK' || system === 'AU') {
+      return band; // same
+    } else if (system === 'EU') {
+      // EU band -> US: (EU / 2.54) + 4, round to even
+      let us = Math.round(band / 2.54) + 4;
+      if (us % 2 !== 0) us += 1;
+      return us;
+    } else if (system === 'JP') {
+      // JP band = underbust cm -> US: (JP / 2.54) + 4, round to even
+      let us = Math.round(band / 2.54) + 4;
+      if (us % 2 !== 0) us += 1;
+      return us;
+    }
+  }
+
+  // Cup mapping from any system to US cup
+  function toUSCup(system, cup) {
+    // Find the US cup for given system and cup letter
+    for (let key in cupMapping) {
+      if (cupMapping[key][system] === cup) {
+        return key;
+      }
+    }
+    return cup; // fallback
+  }
+
+  // Main conversion function
+  function convertSize(fromSystem, band, cup) {
+    // Convert to US band and cup
+    let usBand = toUSBand(fromSystem, band);
+    let usCup = toUSCup(fromSystem, cup);
+
+    // Now generate all outputs
+    let euBand = convertBand(usBand).eu;
+    let auBand = convertBand(usBand).au;
+    let jpBand = convertBand(usBand).jp;
+
+    let usCupLetter = cupMapping[usCup] ? cupMapping[usCup]['US'] : usCup;
+    let ukCupLetter = cupMapping[usCup] ? cupMapping[usCup]['UK'] : usCup;
+    let euCupLetter = cupMapping[usCup] ? cupMapping[usCup]['EU'] : usCup;
+    let auCupLetter = cupMapping[usCup] ? cupMapping[usCup]['AU'] : usCup;
+    let jpCupLetter = cupMapping[usCup] ? cupMapping[usCup]['JP'] : usCup;
+
+    return {
+      US: usBand + usCupLetter,
+      UK: usBand + ukCupLetter, // band same as US
+      EU: euBand + euCupLetter,
+      AU: usBand + auCupLetter, // band same as US/UK
+      JP: jpBand + jpCupLetter
+    };
+  }
+
+  const form = document.getElementById('convForm');
+  const panel = document.getElementById('resultPanel');
+  const resUS = document.getElementById('resUS');
+  const resUK = document.getElementById('resUK');
+  const resEU = document.getElementById('resEU');
+  const resAU = document.getElementById('resAU');
+  const resJP = document.getElementById('resJP');
+  const note = document.getElementById('resultNote');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fromSystem = document.getElementById('fromSystem').value;
+    const band = parseInt(document.getElementById('bandInput').value);
+    const cup = document.getElementById('cupInput').value;
+
+    if (!band || band < 20 || band > 60) {
+      panel.classList.add('show');
+      resUS.textContent = '—';
+      resUK.textContent = '—';
+      resEU.textContent = '—';
+      resAU.textContent = '—';
+      resJP.textContent = '—';
+      note.textContent = 'Please enter a valid band number (20–60).';
+      return;
+    }
+
+    const result = convertSize(fromSystem, band, cup);
+    resUS.textContent = result.US;
+    resUK.textContent = result.UK;
+    resEU.textContent = result.EU;
+    resAU.textContent = result.AU;
+    resJP.textContent = result.JP;
+    note.textContent = `Converted from ${fromSystem} ${band}${cup} to all systems.`;
+    panel.classList.add('show');
+  });
+</script>

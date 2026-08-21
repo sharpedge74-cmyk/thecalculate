@@ -1,0 +1,170 @@
+---
+layout: default
+title: Sister Size Calculator – Find Your Equivalent Bra Size | IMRango
+description: Enter your bra size and get sister sizes – same cup volume, different band and cup. Perfect when your size is out of stock.
+---
+
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Sister Size Calculator – Find Your Equivalent Bra Size</h1>
+      <p>Enter your current band and cup, and we’ll show you sister sizes – sizes that hold the same cup volume but with a different band and cup letter. Great for when your size is sold out or you want a different fit.</p>
+    </div>
+
+    <!-- calculator tool -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Sister Size Finder</h2>
+      </div>
+
+      <form id="sisterForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="band">Band number</label>
+            <div class="field-input">
+              <input type="number" id="band" inputmode="numeric" step="1" min="28" max="56" placeholder="e.g. 34" required>
+              <span class="unit-suffix">band</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cup">Cup letter</label>
+            <select id="cup" class="field-input" style="width:100%; padding:12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:1rem;">
+              <option value="AA">AA</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="DD">DD</option>
+              <option value="DDD">DDD</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+            </select>
+            <p class="field-hint">Select your current cup letter.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Find Sister Sizes</button>
+      </form>
+
+      <div class="result-panel" id="sisterResult" aria-live="polite">
+        <div id="sisterOutput" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:10px; text-align:center;"></div>
+        <p id="sisterNote" style="margin-top:12px;">These sizes have the same cup volume as your current size.</p>
+      </div>
+
+      <p class="tool-note">Need to find your original size? Try the <a href="/bra-size-calculator">Bra Size Calculator</a> or check <a href="/bra-size-conversion">conversions</a> for different regions.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EASY‑TO‑READ CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Are Sister Sizes?</h2>
+    <p><strong>Sister sizes</strong> are bra sizes that hold the same cup volume even though the band and cup letter are different. For example, <strong>34C</strong>, <strong>32D</strong>, and <strong>36B</strong> all have the same cup capacity. If your usual size is sold out or feels a bit off, a sister size can give you the same support with a different fit.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>⬇️ Go Down a Band, Up a Cup</h3>
+        <p>If the band feels too loose, try a <strong>smaller band</strong> and a <strong>larger cup</strong>. Example: 34C → 32D.</p>
+      </div>
+      <div class="guide-card">
+        <h3>⬆️ Go Up a Band, Down a Cup</h3>
+        <p>If the band feels too tight, try a <strong>larger band</strong> and a <strong>smaller cup</strong>. Example: 34C → 36B.</p>
+      </div>
+    </div>
+
+    <h2>Why Use Sister Sizes?</h2>
+    <ul>
+      <li><strong>Your size is out of stock</strong> – sister sizes give you more options.</li>
+      <li><strong>Different brands fit differently</strong> – a sister size may fit better in a specific brand.</li>
+      <li><strong>Your body changes</strong> – weight loss, gain, or pregnancy can change how your bra fits; sister sizing gives you flexibility.</li>
+      <li><strong>Comfort</strong> – if your current bra digs in or rides up, a sister size might solve the problem.</li>
+    </ul>
+
+    <h2>How to Use the Sister Size Calculator</h2>
+    <p>Simply enter your current band number and cup letter in the tool above. The calculator will instantly show you the two sister sizes – one with a smaller band and larger cup, and one with a larger band and smaller cup. Try them on to see which feels best.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Still not sure?</p>
+      <a href="/bra-size-calculator" class="btn btn-primary">Use the Bra Size Calculator</a>
+    </div>
+
+    <h2>What If I’m Between Sister Sizes?</h2>
+    <p>If neither sister size feels quite right, you can also try going down a band and up two cups (e.g., 34C → 30E) or up a band and down two cups (e.g., 34C → 38A). This works if you need more or less volume while keeping the same band comfort.</p>
+
+    <h2>Why Trust This Calculator?</h2>
+    <ul>
+      <li><strong>Free</strong> – no sign‑up, no hidden charges.</li>
+      <li><strong>Private</strong> – all calculations run in your browser – we never see your measurements.</li>
+      <li><strong>Accurate</strong> – uses standard sister‑size logic that professional fitters use.</li>
+      <li><strong>Updated</strong> – our charts are checked regularly to match current brand sizing.</li>
+    </ul>
+    <p>Your sister sizes are a great starting point. Every bra fits a little differently, so always try on a few styles to find the one that feels best.</p>
+
+    <div class="guide-card" style="background:var(--wine); color:var(--white); text-align:center; padding:20px;">
+      <p style="font-size:1.2rem; font-weight:700;">Ready to find your sister sizes?</p>
+      <p>Enter your size in the calculator above and see your options instantly.</p>
+      <a href="#calculator" class="btn btn-ghost" style="border-color:var(--white); color:var(--white); margin-top:12px; display:inline-block;">Go to Calculator ↑</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById('sisterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const band = parseInt(document.getElementById('band').value);
+    const cup = document.getElementById('cup').value;
+
+    // Cup order for sister sizing
+    const cupOrder = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD', 'G', 'H', 'I'];
+    const idx = cupOrder.indexOf(cup);
+
+    if (idx === -1 || !band || band < 28 || band > 56) {
+      const output = document.getElementById('sisterOutput');
+      output.innerHTML = '<div style="grid-column:1/-1;">Please enter a valid band (28–56) and select a cup letter.</div>';
+      document.getElementById('sisterResult').classList.add('show');
+      return;
+    }
+
+    // Calculate sister sizes
+    const sisterSizes = [];
+
+    // Smaller band, larger cup (if possible)
+    if (band - 2 >= 28 && idx + 1 < cupOrder.length) {
+      sisterSizes.push({ band: band - 2, cup: cupOrder[idx + 1] });
+    }
+
+    // Original size (always included)
+    sisterSizes.push({ band: band, cup: cup });
+
+    // Larger band, smaller cup (if possible)
+    if (band + 2 <= 56 && idx - 1 >= 0) {
+      sisterSizes.push({ band: band + 2, cup: cupOrder[idx - 1] });
+    }
+
+    // If only one sister size (edge case), add another if possible
+    if (sisterSizes.length === 1) {
+      if (band - 2 >= 28 && idx + 2 < cupOrder.length) {
+        sisterSizes.push({ band: band - 2, cup: cupOrder[idx + 2] });
+      } else if (band + 2 <= 56 && idx - 2 >= 0) {
+        sisterSizes.push({ band: band + 2, cup: cupOrder[idx - 2] });
+      }
+    }
+
+    // Render results
+    const output = document.getElementById('sisterOutput');
+    output.innerHTML = sisterSizes.map(s => `<div><strong>${s.band}${s.cup}</strong></div>`).join('');
+
+    const note = document.getElementById('sisterNote');
+    note.textContent = `Sister sizes for ${band}${cup} – these have the same cup volume.`;
+
+    document.getElementById('sisterResult').classList.add('show');
+  });
+</script>

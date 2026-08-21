@@ -1,0 +1,315 @@
+---
+layout: default
+title: Sports Bra Calculator – Find Your Sports Bra Size | IMRango
+description: Get the right sports bra size for your activity – low, medium, or high impact. Enter your measurements and find your size in US, UK, EU, AU, FR.
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Sports Bra Calculator – Find Your Size & Support Level</h1>
+      <p>Not all sports bras fit the same. Enter your measurements and activity level to get the right size for your workout – low, medium, or high impact. Compare US, UK, EU, AU, and FR sizing.</p>
+    </div>
+
+    <!-- ============ CALCULATOR TOOL ============ -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Sports Bra Size Finder</h2>
+      </div>
+
+      <!-- Unit Toggle Only -->
+      <div class="form-grid" style="grid-template-columns: 1fr; gap:18px; margin-bottom:18px;">
+        <div class="field">
+          <label>Unit System</label>
+          <div class="unit-toggle" role="group" aria-label="Measurement unit">
+            <button type="button" id="unitIn" aria-pressed="true" onclick="setUnit('in')">in</button>
+            <button type="button" id="unitCm" aria-pressed="false" onclick="setUnit('cm')">cm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="fields-container">
+        <div class="form-grid">
+          <div class="field">
+            <label for="underbust">Underbust (Snug)</label>
+            <div class="field-input">
+              <input type="number" id="underbust" step="0.1" value="32" placeholder="e.g. 32">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure snugly under your bust – sports bras run tight, so take a firm measurement.</p>
+          </div>
+          <div class="field">
+            <label for="bust">Full Bust (Standing)</label>
+            <div class="field-input">
+              <input type="number" id="bust" step="0.1" value="36" placeholder="e.g. 36">
+              <span class="unit-suffix unit-label">in</span>
+            </div>
+            <p class="field-hint">Measure around the fullest part of your chest – don't compress tissue.</p>
+          </div>
+        </div>
+
+        <!-- Activity Level -->
+        <div class="field" style="margin-top:16px;">
+          <label for="activity">Activity Level / Impact</label>
+          <select id="activity" class="field-input" style="width:100%; padding:10px 12px; border:2px solid var(--line); border-radius:var(--radius-md); background:var(--paper); font-family:var(--body); font-size:14px; font-weight:600;">
+            <option value="low">Low Impact (Yoga, Walking, Pilates)</option>
+            <option value="medium" selected>Medium Impact (Cycling, Gym, Hiking)</option>
+            <option value="high">High Impact (Running, Jumping, HIIT)</option>
+          </select>
+          <p class="field-hint">Select your main activity – this determines the support level recommendation.</p>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" class="btn btn-primary btn-block btn-lg calc-btn" onclick="calculateSportsBra()" style="margin-top:6px;">Find My Sports Bra Size</button>
+
+      <!-- Results Panel -->
+      <div class="result-panel" id="resultsCard">
+        <div class="result-size" id="resUsVal" style="font-size:clamp(30px,4vw,38px);">34C</div>
+        <div class="form-grid" style="grid-template-columns:repeat(5,1fr); gap:10px; margin-top:12px;">
+          <div><strong>US</strong><br><span id="resUsVal2">34C</span></div>
+          <div><strong>UK</strong><br><span id="resUkVal">34C</span></div>
+          <div><strong>EU</strong><br><span id="resEuVal">75C</span></div>
+          <div><strong>AU</strong><br><span id="resAuVal">12C</span></div>
+          <div><strong>FR</strong><br><span id="resFrVal">90C</span></div>
+        </div>
+        <p id="resultNote" style="margin-top:8px; color:var(--ink-soft); font-size:14px;"></p>
+        <p id="sportsAdvice" style="margin-top:6px; color:var(--wine); font-weight:600; font-size:15px;"></p>
+        <div id="sisterChipsContainer" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+        <p class="tool-note" style="margin-top:12px;">Need a different method? Try the <a href="/bra-size-calculator">Standard Bra Size Calculator</a> or <a href="/sister-size-calculator">Sister Size Finder</a>.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ RICH CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>Why Sports Bras Fit Differently</h2>
+    <p>Sports bras are designed to minimize breast movement during physical activity. Unlike everyday bras, they use <strong>compression</strong> (flattening) or <strong>encapsulation</strong> (separate cups) to reduce bounce. Sports bras also run tighter in the band – you may need to size up in the cup or band depending on the style and activity level.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); border-left:4px solid var(--wine); padding:18px 22px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:20px 0;">
+      <strong>Key difference:</strong> Your sports bra size might be different from your everyday bra size. Many women wear a smaller band and larger cup in sports bras for better support.
+    </div>
+
+    <h2>Choose the Right Support Level</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>🧘 Low Impact</h3>
+        <p>Yoga, walking, pilates, stretching. Light compression, comfortable fit. Look for seamless, wire-free styles.</p>
+        <p><strong>Tip:</strong> Stick to your regular size for low impact.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🚴 Medium Impact</h3>
+        <p>Cycling, gym, hiking, dance. Moderate compression or encapsulation. Look for adjustable straps and a wider band.</p>
+        <p><strong>Tip:</strong> Size down in the band for extra support.</p>
+      </div>
+      <div class="guide-card">
+        <h3>🏃 High Impact</h3>
+        <p>Running, jumping, HIIT, plyometrics. Maximum support with encapsulation or firm compression. Look for racerback styles and moisture-wicking fabric.</p>
+        <p><strong>Tip:</strong> You may need to size up in the cup for high impact.</p>
+      </div>
+    </div>
+
+    <h2>How to Measure for a Sports Bra</h2>
+    <p>Follow these steps for the best sports bra fit:</p>
+    <ol style="padding-left:1.5rem; color:var(--ink-soft);">
+      <li><strong>Measure your underbust:</strong> Take a firm, snug measurement – sports bras need a tighter band for support.</li>
+      <li><strong>Measure your bust:</strong> Stand straight and measure around the fullest part – don't compress the tissue.</li>
+      <li><strong>Select your activity:</strong> Choose low, medium, or high impact based on your main workout.</li>
+      <li><strong>Click "Find My Sports Bra Size":</strong> Get your recommended size and support level.</li>
+    </ol>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px; margin-top:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Need more help finding your size?</p>
+      <a href="/bra-size-calculator" class="btn btn-primary">Use the Bra Size Calculator</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <details class="faq-item" open>
+        <summary>Should I size up or down for a sports bra?</summary>
+        <p>Sports bras typically run tighter in the band for support. Many women size down in the band and up in the cup – especially for high impact activities. Always check the brand's size guide.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's the difference between compression and encapsulation?</summary>
+        <p>Compression bras flatten the breasts against the chest – good for smaller busts. Encapsulation bras have separate cups that support each breast individually – better for larger busts and high impact.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I wear a sports bra for everyday use?</summary>
+        <p>You can, but sports bras are designed for movement and may not provide the same shaping as everyday bras. For daily wear, choose a low-impact style for comfort.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does IMRango store my measurements?</summary>
+        <p>No. Everything runs locally in your browser. We do not collect, store, or share any of your personal data or measurements.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Cup definitions
+  const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD/F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ'];
+  const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+  const AU_CUPS = UK_CUPS;
+  const FR_CUPS = EU_CUPS;
+
+  let currentUnit = 'in';
+
+  // ----- Unit Toggle -----
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+
+    document.getElementById('unitIn').setAttribute('aria-pressed', unit === 'in' ? 'true' : 'false');
+    document.getElementById('unitCm').setAttribute('aria-pressed', unit === 'cm' ? 'true' : 'false');
+
+    document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+
+    const inputs = ['underbust', 'bust'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el.value) {
+        const val = parseFloat(el.value);
+        el.value = unit === 'cm' ? Math.round(val * 2.54 * 10) / 10 : Math.round((val / 2.54) * 10) / 10;
+      }
+      el.placeholder = unit === 'cm' ? 'e.g. 81' : 'e.g. 32';
+    });
+
+    if (document.getElementById('resultsCard').classList.contains('show')) {
+      calculateSportsBra();
+    }
+  }
+
+  function getNum(id) {
+    const val = parseFloat(document.getElementById(id).value);
+    return isNaN(val) ? 0 : val;
+  }
+
+  function toInches(val, unit) {
+    return unit === 'cm' ? val / 2.54 : val;
+  }
+
+  function calculateSportsBra() {
+    const unit = currentUnit;
+    const activity = document.getElementById('activity').value;
+
+    let ub = toInches(getNum('underbust'), unit);
+    let bust = toInches(getNum('bust'), unit);
+
+    if (ub <= 0 || bust <= 0) {
+      alert('Please enter valid underbust and bust measurements.');
+      return;
+    }
+
+    // Sports bra specific logic
+    let bandOffset = 0;
+    let cupOffset = 0;
+
+    if (activity === 'high') {
+      bandOffset = -1;
+      cupOffset = 1;
+    }
+
+    // Calculate band
+    let roundedUb = Math.round(ub);
+    let bandInches = (roundedUb % 2 === 0) ? roundedUb : roundedUb + 1;
+    bandInches = bandInches + bandOffset;
+    if (bandInches < 28) bandInches = 28;
+    if (bandInches > 56) bandInches = 56;
+
+    // Calculate cup
+    let diff = bust - bandInches + cupOffset;
+    let cupIdx = Math.round(diff);
+    if (cupIdx < 0) cupIdx = 0;
+    if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+    // Regional sizes
+    const usCup = US_CUPS[cupIdx];
+    const ukCup = UK_CUPS[cupIdx];
+    const euCup = EU_CUPS[cupIdx];
+    const auCup = AU_CUPS[cupIdx];
+    const frCup = FR_CUPS[cupIdx];
+
+    const usBand = bandInches;
+    const ukBand = bandInches;
+    const euBand = Math.round((bandInches - 32) * 2.5 + 70);
+    const auBand = bandInches - 22;
+    const frBand = euBand + 15;
+
+    // Update DOM
+    document.getElementById('resUsVal').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUsVal2').textContent = `${usBand}${usCup}`;
+    document.getElementById('resUkVal').textContent = `${ukBand}${ukCup}`;
+    document.getElementById('resEuVal').textContent = `${euBand}${euCup}`;
+    document.getElementById('resAuVal').textContent = `${auBand}${auCup}`;
+    document.getElementById('resFrVal').textContent = `${frBand}${frCup}`;
+
+    const activityNames = {
+      'low': 'Low Impact (Yoga, Walking)',
+      'medium': 'Medium Impact (Cycling, Gym)',
+      'high': 'High Impact (Running, HIIT)'
+    };
+    const adviceMessages = {
+      'low': 'For low impact, look for lightweight, seamless styles. Your regular size should work well.',
+      'medium': 'For medium impact, look for bras with adjustable straps and a wider band. Consider sizing down in the band for extra support.',
+      'high': 'For high impact, look for encapsulation styles with racerback support. Size up in the cup and down in the band for maximum support.'
+    };
+
+    document.getElementById('resultNote').textContent = `Your sports bra size: ${usBand}${usCup} (US) / ${ukBand}${ukCup} (UK) – ${activityNames[activity]}`;
+    document.getElementById('sportsAdvice').textContent = adviceMessages[activity];
+
+    // Render sister sizes
+    renderSisterSizes(usBand, cupIdx);
+
+    // Show results
+    document.getElementById('resultsCard').classList.add('show');
+  }
+
+  function renderSisterSizes(usBand, cupIdx) {
+    const container = document.getElementById('sisterChipsContainer');
+    let chips = [];
+
+    if (cupIdx < US_CUPS.length - 1 && usBand - 2 >= 26) {
+      chips.push({ type: 'Tighter Band', size: `${usBand - 2}${US_CUPS[cupIdx + 1]}` });
+    }
+
+    if (cupIdx > 0 && usBand + 2 <= 50) {
+      chips.push({ type: 'Looser Band', size: `${usBand + 2}${US_CUPS[cupIdx - 1]}` });
+    }
+
+    if (chips.length === 0) {
+      container.innerHTML = '<span style="font-size:13px; color:var(--ink-soft);">No sister sizes found for this range.</span>';
+    } else {
+      container.innerHTML = chips.map(c =>
+        `<span class="tag tag-core" style="background:var(--paper-2); color:var(--ink); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">${c.size} <small style="font-weight:400; color:var(--ink-soft);">(${c.type})</small></span>`
+      ).join('');
+    }
+  }
+
+  // Set initial active states
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('unitIn').setAttribute('aria-pressed', 'true');
+
+    const inputs = ['underbust', 'bust', 'activity'];
+    inputs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function() {
+          if (document.getElementById('resultsCard').classList.contains('show')) {
+            calculateSportsBra();
+          }
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Band Size Calculator – Find Your Bra Band Number | IMRango – IM Rango</title>
+<meta name="description" content="Enter your underbust measurement to get your band size. Fast, private, and accurate – works for US and UK sizing.">
+<link rel="canonical" href="http://localhost:4000/band-size-calculator">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+  <div class="container nav-row" style="position:relative;">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
+        Calculators <span class="nav-caret"></span>
+      </button>
+      <a class="nav-link" href="/bra-measurement-chart">Bra Measurement Chart</a>
+      <a class="nav-link" href="/about">About</a>
+    </nav>
+
+    <a href="#calculator" class="btn btn-primary nav-cta">Try the Calculator</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop mega menu -->
+    <div class="mega" id="megaMenu" role="region" aria-label="Calculators menu">
+      <div class="mega-grid">
+        <div class="mega-col">
+          <h4>Core Calculators</h4>
+          <a href="/bra-size-calculator">Bra Size Calculator<small>Band + bust, the standard method</small></a>
+          <a href="/cup-size-calculator">Cup Size Calculator<small>Just the cup, from a known band</small></a>
+          <a href="/bust-size-calculator">Bust Size Calculator<small>Convert a single bust measurement</small></a>
+          <a href="/band-size-calculator">Band Size Calculator<small>Check your band size alone</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Conversion Tools</h4>
+          <a href="/bra-size-conversion">Bra Size Conversion<small>US · UK · EU · AU · JP</small></a>
+          <a href="/sister-size-calculator">Sister Size Calculator<small>Same volume, different band</small></a>
+          <a href="/brand-size-converter">Brand Size Converter<small>Map your size to a brand chart</small></a>
+        </div>
+        <div class="mega-col">
+          <h4>Specialty Calculators</h4>
+          <a href="/abtf-calculator">ABTF Calculator<small>The 3-measurement method</small></a>
+          <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Fit for compression & encapsulation</small></a>
+          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band & cup range</small></a>
+          <a href="/maternity-bra-size-calculator">Maternity & Nursing<small>For a changing body</small></a>
+        </div>
+        <div class="mega-col">
+          <div>
+            <h4>Guides</h4>
+            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+            <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+            <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+            <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="/" class="logo">IM<span>Rango</span></a>
+    <button class="hamburger" id="closeMobileNav" aria-label="Close menu">✕</button>
+  </div>
+  <details class="mobile-accordion" open>
+    <summary>Core Calculators</summary>
+    <div class="mega-col">
+      <a href="/bra-size-calculator">Bra Size Calculator</a>
+      <a href="/cup-size-calculator">Cup Size Calculator</a>
+      <a href="/bust-size-calculator">Bust Size Calculator</a>
+      <a href="/band-size-calculator">Band Size Calculator</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Conversion Tools</summary>
+    <div class="mega-col">
+      <a href="/bra-size-conversion">Bra Size Conversion</a>
+      <a href="/sister-size-calculator">Sister Size Calculator</a>
+      <a href="/brand-size-converter">Brand Size Converter</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Specialty Calculators</summary>
+    <div class="mega-col">
+      <a href="/abtf-calculator">ABTF Calculator</a>
+      <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+      <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+      <a href="/maternity-bra-size-calculator">Maternity & Nursing</a>
+    </div>
+  </details>
+  <details class="mobile-accordion">
+    <summary>Guides</summary>
+    <div class="mega-col">
+      <div>
+        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+        <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      </div>
+    </div>
+  </details>
+  <a class="nav-link" href="/bra-measurement-chart" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">Bra Measurement Chart</a>
+  <a href="/about" class="nav-link" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">About</a>
+</div>
+
+  <div class="ruler" aria-hidden="true"></div>
+  <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+<div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+
+  <main id="main">
+    <section class="hero" id="calculator">
+  <div class="container">
+
+    <div class="hero-head">
+      <h1>Band Size Calculator – Find Your Bra Band Number</h1>
+      <p>Enter your underbust measurement below, and we’ll give you your band size – the number in your bra size (like 34, 36, or 38). It’s fast, private, and works for everyone.</p>
+    </div>
+
+    <!-- calculator tool -->
+    <div class="tool-card">
+      <div class="tool-top">
+        <h2>Band Size Calculator</h2>
+        <div class="unit-toggle" role="group" aria-label="Measurement unit">
+          <button type="button" id="unitIn" aria-pressed="true">in</button>
+          <button type="button" id="unitCm" aria-pressed="false">cm</button>
+        </div>
+      </div>
+
+      <form id="calcForm" novalidate>
+        <div class="field">
+          <label for="underbust">Underbust measurement</label>
+          <div class="field-input">
+            <input type="number" id="underbust" inputmode="decimal" step="0.5" min="20" max="60" placeholder="e.g. 32" required>
+            <span class="unit-suffix" id="suffix1">in</span>
+          </div>
+          <p class="field-hint">Measure snugly around your ribcage, just under the bust. Take the measurement after you exhale.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Calculate My Band Size</button>
+      </form>
+
+      <div class="result-panel" id="resultPanel" aria-live="polite">
+        <div class="result-size" id="resultSize">34</div>
+        <p id="resultNote">Your estimated band size is <strong>34</strong>.</p>
+      </div>
+
+      <p class="tool-note">Now that you have your band, find your full bra size with the <a href="/bra-size-calculator">Bra Size Calculator</a> or get your cup letter with the <a href="/cup-size-calculator">Cup Size Calculator</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ EASY‑TO‑READ CONTENT ============ -->
+<section class="section">
+  <div class="container">
+
+    <h2>What Is a Band Size?</h2>
+    <p>Your <strong>band size</strong> is the number in your bra size – like 34, 36, or 38. It comes from your <strong>underbust measurement</strong>, which is the circumference of your ribcage just below your breasts. The band is the part of the bra that wraps around your body and does most of the heavy lifting – about 80% of the support comes from the band, not the straps.</p>
+    <p>That’s why getting your band size right is so important. A band that's too tight can dig in and be uncomfortable. A band that's too loose won't give you enough support, and the straps will have to work too hard.</p>
+
+    <h2>How to Measure Your Band Size</h2>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>1. Use a Soft Tape Measure</h3>
+        <p>Take a flexible tape measure – like the kind used for sewing. Make sure it’s not stretched or twisted.</p>
+      </div>
+      <div class="guide-card">
+        <h3>2. Stand Up Straight</h3>
+        <p>Keep your feet flat, shoulders relaxed, and arms at your sides. Breathe out normally before measuring.</p>
+      </div>
+      <div class="guide-card">
+        <h3>3. Measure Just Below Your Bust</h3>
+        <p>Wrap the tape around your ribcage, right under where your breasts start. Keep it snug but not tight – it should feel firm but comfortable.</p>
+      </div>
+      <div class="guide-card">
+        <h3>4. Round to the Nearest Even Number</h3>
+        <p>If your measurement is 31″, round up to 32″. If it’s 33″, round up to 34″. Bra bands come in even numbers (28, 30, 32, 34, etc.).</p>
+      </div>
+    </div>
+    <p>Enter your underbust measurement in the calculator above, and we’ll do the math for you – giving you your exact band size in seconds.</p>
+
+    <h2>Why Your Band Size Matters</h2>
+    <p>The band is the foundation of your bra. A properly fitted band sits level across your back, stays in place when you move, and doesn't ride up. It should feel firm but not painful. If you can pull the band more than a few inches away from your body, it's too loose. If it leaves red marks or feels uncomfortable, it might be too tight.</p>
+    <p>Your band size can also change over time – due to weight changes, muscle gain, or even just different brands. That’s why it’s a good idea to measure yourself every few months.</p>
+
+    <h2>Band Size vs. Cup Size – What’s the Difference?</h2>
+    <p>Your <strong>band size</strong> is the number (34, 36, etc.). Your <strong>cup size</strong> is the letter (A, B, C, etc.). Together, they make your full bra size like 34B or 36D. The band size comes from your underbust, and the cup size comes from the difference between your bust and your band. Both matter – you can't have one without the other.</p>
+
+    <h2>Sister Sizing – Same Cup, Different Band</h2>
+    <p>If you’re between band sizes, or if your usual band size is sold out, you can try a <strong>sister size</strong>. Sister sizes have the same cup volume but a different band. For example, if you wear a 34B, your sister sizes are 32C (smaller band, larger cup) and 36A (larger band, smaller cup).</p>
+    <p>Use our <a href="/sister-size-calculator">Sister Size Calculator</a> to find your matches.</p>
+
+    <div class="guide-card" style="background:var(--paper-2); text-align:center; padding:20px;">
+      <p style="font-weight:700; font-size:1.1rem;">Got your band size? Now find your cup.</p>
+      <a href="/cup-size-calculator" class="btn btn-primary">Try the Cup Size Calculator →</a>
+    </div>
+
+    <h2>Why Trust This Calculator?</h2>
+    <ul>
+      <li><strong>It’s free</strong> – no sign‑up, no hidden fees.</li>
+      <li><strong>It’s private</strong> – all calculations happen in your browser – we never see your measurements.</li>
+      <li><strong>It’s accurate</strong> – we use the same formula that professional fitters use.</li>
+      <li><strong>We keep it updated</strong> – our charts match current brand sizing.</li>
+    </ul>
+    <p>Remember: your band size is a great starting point. Every brand fits a little differently, so always try on a few styles to find the one that feels best.</p>
+
+    <div class="guide-card" style="background:var(--wine); color:var(--white); text-align:center; padding:20px;">
+      <p style="font-size:1.2rem; font-weight:700;">Ready to find your band size?</p>
+      <p>Enter your underbust measurement in the calculator above right now.</p>
+      <a href="#calculator" class="btn btn-ghost" style="border-color:var(--white); color:var(--white); margin-top:12px; display:inline-block;">Go to Calculator ↑</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  // Unit toggle
+  const unitIn = document.getElementById('unitIn');
+  const unitCm = document.getElementById('unitCm');
+  const underbustInput = document.getElementById('underbust');
+  const suffix1 = document.getElementById('suffix1');
+  let currentUnit = 'in';
+
+  function setUnit(unit) {
+    if (unit === currentUnit) return;
+    currentUnit = unit;
+    unitIn.setAttribute('aria-pressed', String(unit === 'in'));
+    unitCm.setAttribute('aria-pressed', String(unit === 'cm'));
+    suffix1.textContent = unit;
+    if (underbustInput.value) {
+      const v = parseFloat(underbustInput.value);
+      underbustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
+    }
+    underbustInput.placeholder = unit === 'cm' ? 'e.g. 81' : 'e.g. 32';
+  }
+  unitIn.addEventListener('click', () => setUnit('in'));
+  unitCm.addEventListener('click', () => setUnit('cm'));
+
+  // Band logic
+  function calculateBand(underbustVal, unit) {
+    let underbustIn = unit === 'cm' ? underbustVal / 2.54 : underbustVal;
+    const base = Math.round(underbustIn);
+    const band = (base % 2 === 0) ? base : base + 1;
+    return band;
+  }
+
+  const form = document.getElementById('calcForm');
+  const resultPanel = document.getElementById('resultPanel');
+  const resultSize = document.getElementById('resultSize');
+  const resultNote = document.getElementById('resultNote');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const u = parseFloat(underbustInput.value);
+    if (!u || u < 20) {
+      resultPanel.classList.add('show');
+      resultSize.textContent = '—';
+      resultNote.textContent = 'Please enter a valid underbust measurement (20–60 inches or 50–152 cm).';
+      return;
+    }
+    const band = calculateBand(u, currentUnit);
+    resultSize.textContent = band;
+    resultNote.innerHTML = `Your estimated band size is <strong>${band}</strong>. Now use the <a href="/bra-size-calculator" style="color:var(--wine); font-weight:600;">Bra Size Calculator</a> to find your full size.`;
+    resultPanel.classList.add('show');
+  });
+</script>
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Calculators</h4>
+        <a href="/bra-size-calculator">Bra Size Calculator</a>
+        <a href="/cup-size-calculator">Cup Size Calculator</a>
+        <a href="/bust-size-calculator">Bust Size Calculator</a>
+        <a href="/bra-size-conversion">Bra Size Conversion</a>
+      </div>
+      <div>
+        <div>
+          <h4>Guides</h4>
+          <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+          <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+          <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+          <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
+          <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/editorial-policy">Editorial Policy</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IM Rango. All rights reserved.</span>
+      <span>Estimates only – not a substitute for a professional fitting.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
