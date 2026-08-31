@@ -174,7 +174,7 @@ p{margin:0 0 1em;}
   .tool-card{padding:16px;border-radius:var(--radius-md);}
 }
 .tool-card::before{
-  content:"/";position:absolute;top:0;left:0;right:0;height:6px;
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
   background:repeating-linear-gradient(90deg, var(--brass) 0 10px, var(--wine) 10px 20px);
 }
 .tool-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px;}
