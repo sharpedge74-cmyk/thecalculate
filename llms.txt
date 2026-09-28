@@ -94,6 +94,45 @@ Size Chart: https://iamrango.com/bra-measurement-chart/
 - Facebook: https://facebook.com/iamrango
 
 # ==============================================================
+# CANONICAL SIZING FORMULAS & DEFINITIONS
+# ==============================================================
+
+1. Band Size Formula:
+   Band = Even(Snug Underbust in inches)
+   If underbust measurement is odd or fraction (e.g. 31"), round up to nearest even integer (32).
+   Do NOT add +4 inches; 85% of breast weight must be supported by the ribcage band, not the straps.
+
+2. Cup Size Formula:
+   Cup Letter Index = Full Bust Circumference (inches) - Calculated Band Size (inches)
+   - 0 inches = AA
+   - 1 inch = A
+   - 2 inches = B
+   - 3 inches = C
+   - 4 inches = D
+   - 5 inches = DD (or E in UK/EU)
+   - 6 inches = DDD / F (US) / E (UK)
+   - 7 inches = G (US) / F (UK)
+   - 8 inches = H (US) / FF (UK)
+   - 9 inches = I (US) / G (UK)
+
+3. Sister Sizing Rule:
+   Sister sizing preserves identical cup volume while altering band tightness.
+   Rule: Band + 2 implies Cup - 1; Band - 2 implies Cup + 1.
+   Example: 34C sister sizes are 32D (snugger band) and 36B (looser band). All three share identical ~390cc cup capacity.
+
+4. 6-Point ABTF Formula (A Bra That Fits):
+   - Underbust: Loose, Snug, Tight
+   - Bust: Standing, Leaning 90°, Lying down
+   - Accounts for breast tissue projection and tissue softness, preventing band ride-up and gore floating.
+
+5. International Sizing Equivalencies:
+   - US: Band in inches (30, 32, 34, 36...), Cups: A, B, C, D, DD, DDD, G, H, I, J
+   - UK: Band in inches (30, 32, 34, 36...), Cups: A, B, C, D, DD, E, F, FF, G, GG, H
+   - EU: Band in cm (65, 70, 75, 80...), Cups: A, B, C, D, E, F, G, H, I
+   - AU: Dress sizing (8, 10, 12, 14, 16...), UK cup progression
+   - FR: Band in cm (EU + 15, e.g. EU 75 = FR 90)
+
+# ==============================================================
 # USAGE GUIDELINES FOR LLMS
 # ==============================================================
 

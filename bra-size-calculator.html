@@ -2,348 +2,1253 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bra Size Calculator – Find Your Perfect Fit | IMRango – IM Rango</title>
-<meta name="description" content="Use our easy bra size calculator to find your band and cup size. Enter your measurements and get your US/UK size in seconds.">
-<link rel="canonical" href="http://localhost:4000/bra-size-calculator">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bra Size Calculator – Find Your Band &amp; Cup Size | IMRango</title>
+  <meta name="description" content="Calculate your exact bra size with Standard 2-point, Victoria's Secret +4, and ABTF 6-measurement algorithms. Compare US, UK, EU, AU, FR sizing instantly.">
+  <meta name="keywords" content="bra size calculator, bra measurement calculator, a bra that fits calculator, victoria secret bra size calculator, sister size calculator, cup size calculator">
+  <link rel="canonical" href="https://iamrango.com/bra-size-calculator">
+  <link rel="icon" href="/favicon.ico" sizes="any">
 
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bra Size Calculator – Find Your Band &amp; Cup Size | IMRango">
+  <meta property="og:description" content="Calculate your exact bra size with Standard 2-point, Victoria's Secret +4, and ABTF 6-measurement algorithms. Compare US, UK, EU, AU, FR sizing instantly.">
+  <meta property="og:url" content="https://iamrango.com/bra-size-calculator">
+  <meta property="og:site_name" content="IMRango">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bra Size Calculator – Find Your Band &amp; Cup Size | IMRango">
+  <meta name="twitter:description" content="Calculate your exact bra size with Standard 2-point, Victoria's Secret +4, and ABTF 6-measurement algorithms. Compare US, UK, EU, AU, FR sizing instantly.">
+
+  <!-- Clean Sober Typography: Plus Jakarta Sans + Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data for Search & Answer Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://iamrango.com/bra-size-calculator#webapp",
+        "name": "IMRango Precision Bra Size Calculator",
+        "url": "https://iamrango.com/bra-size-calculator",
+        "description": "Interactive bra sizing tool supporting standard 2-point underbust/bust formulas, Victoria's Secret +4 method, and ABTF 6-measurement algorithms across US, UK, EU, AU, and FR standards.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://iamrango.com/bra-size-calculator#howto",
+        "name": "How to Measure Your Bra Size at Home in 4 Simple Steps",
+        "description": "Step-by-step master fitter guide to measuring your ribcage and bust to find your true bra size.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Measure Your Snug Underbust",
+            "text": "Wrap a flexible measuring tape directly underneath your breasts around your ribcage on an exhale. Keep the tape level and snug against the skin.",
+            "position": 1
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Measure Your Standing Full Bust",
+            "text": "Wrap the measuring tape around the fullest point of your breasts (across the nipples) without compressing the tissue. Keep tape parallel to the floor.",
+            "position": 2
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calculate Your Band Size",
+            "text": "Modern sizing sets your band equal to your snug underbust measurement rounded to the nearest even number.",
+            "position": 3
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calculate Cup Difference",
+            "text": "Subtract your calculated band from your bust measurement. Each inch of difference corresponds to one cup letter (1 inch = A, 2 inches = B, 3 inches = C, 4 inches = D, etc.).",
+            "position": 4
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://iamrango.com/bra-size-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why does Victoria's Secret give me a 36B when I measure a 32DD?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Victoria's Secret uses the traditional +4 band method. If your underbust is 32 inches, they add 4 inches to assign you a 36 band. Because a 36 band is much wider, the cup volume must shrink to keep overall capacity similar, putting you into a B cup. In reality, a 36 band will ride up your back and fail to provide support. A 32DD provides true ribcage anchorage and proper cup depth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is sister sizing and when should I use it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sister sizes are pairs of bra sizes that share identical cup volume. If you wear a 34C, its sister sizes are 32D (tighter band) and 36B (looser band). Use sister sizing when a particular bra style runs tight or loose in the band, or when your exact size is out of stock."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do UK and US cup letters diverge after D?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "US sizing uses: D, DD, DDD/F, G, H, I, J, K. UK sizing uses double letters for specific increments: D, DD, E, F, FF, G, GG, H, HH, J, JJ. Therefore, a US 34DDD is equivalent to a UK 34E, while a US 34H is a UK 34FF. Many high-support bra brands (Freya, Panache, Elomi) use UK sizing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I measure over a bra or with bare breasts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For your underbust, measure directly against bare skin. For your bust, you can measure braless or wearing a thin, unpadded, non-push-up bra. If your breast tissue is soft or pendulous, the leaning 90° measurement in our ABTF mode gives the most accurate representation of breast volume without needing a bra."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which hook should a new bra fasten on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A new bra should fit snugly on the loosest hook. Over months of wear and washing, the elastane in the band naturally relaxes. As the band stretches out, you gradually move to the middle and tightest hooks to maintain optimal support."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+  <a href="#calculator" class="skip-link">Skip to calculator</a>
+
+  <!-- ============ SITE HEADER ============ -->
   <header class="site-header">
-  <div class="container nav-row" style="position:relative;">
-    <a href="/" class="logo">IM<span>Rango</span></a>
+    <div class="container nav-row">
+      <a href="/" class="logo" aria-label="IMRango Home">
+        IM<span>Rango</span>
+        <span class="logo-tag">Tool</span>
+      </a>
 
-    <nav class="nav-links" aria-label="Primary">
-      <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
-        Calculators <span class="nav-caret"></span>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu" type="button">
+          All Calculators <span class="nav-caret"></span>
+        </button>
+        <a class="nav-link" href="/bra-measurement-chart">Size Chart Guide</a>
+        <a class="nav-link" href="/sister-sizing-explained">Sister Sizing</a>
+        <a class="nav-link" href="/about">About</a>
+      </nav>
+
+      <a href="#calculator" class="btn btn-primary nav-cta">Calculate Size</a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileNav" type="button">
+        <span></span><span></span><span></span>
       </button>
-      <a class="nav-link" href="/bra-measurement-chart">Bra Measurement Chart</a>
-      <a class="nav-link" href="/about">About</a>
-    </nav>
 
-    <a href="#calculator" class="btn btn-primary nav-cta">Try the Calculator</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span><span></span>
-    </button>
-
-    <!-- Desktop mega menu -->
-    <div class="mega" id="megaMenu" role="region" aria-label="Calculators menu">
-      <div class="mega-grid">
-        <div class="mega-col">
-          <h4>Core Calculators</h4>
-          <a href="/bra-size-calculator">Bra Size Calculator<small>Band + bust, the standard method</small></a>
-          <a href="/cup-size-calculator">Cup Size Calculator<small>Just the cup, from a known band</small></a>
-          <a href="/bust-size-calculator">Bust Size Calculator<small>Convert a single bust measurement</small></a>
-          <a href="/band-size-calculator">Band Size Calculator<small>Check your band size alone</small></a>
-        </div>
-        <div class="mega-col">
-          <h4>Conversion Tools</h4>
-          <a href="/bra-size-conversion">Bra Size Conversion<small>US · UK · EU · AU · JP</small></a>
-          <a href="/sister-size-calculator">Sister Size Calculator<small>Same volume, different band</small></a>
-          <a href="/brand-size-converter">Brand Size Converter<small>Map your size to a brand chart</small></a>
-        </div>
-        <div class="mega-col">
-          <h4>Specialty Calculators</h4>
-          <a href="/abtf-calculator">ABTF Calculator<small>The 3-measurement method</small></a>
-          <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Fit for compression & encapsulation</small></a>
-          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band & cup range</small></a>
-          <a href="/maternity-bra-size-calculator">Maternity & Nursing<small>For a changing body</small></a>
-        </div>
-        <div class="mega-col">
-          <div>
-            <h4>Guides</h4>
-            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
-            <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
-            <a href="/sister-sizing-explained">Sister Sizing Explained</a>
-            <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
-            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      <!-- Desktop Mega Menu Dropdown -->
+      <div class="mega" id="megaMenu" role="region" aria-label="Calculators navigation directory">
+        <div class="mega-grid">
+          <div class="mega-col">
+            <h4>Core Calculators</h4>
+            <a href="/bra-size-calculator">Bra Size Calculator<small>Standard 2-point ribcage &amp; bust</small></a>
+            <a href="/cup-size-calculator">Cup Size Calculator<small>Isolate cup letter from band</small></a>
+            <a href="/bust-size-calculator">Bust Size Calculator<small>Estimate size from bust line</small></a>
+            <a href="/band-size-calculator">Band Size Calculator<small>Find snug ribcage band</small></a>
+          </div>
+          <div class="mega-col">
+            <h4>Conversion Tools</h4>
+            <a href="/bra-size-conversion">Bra Size Conversion<small>US, UK, EU, AU, and JP charts</small></a>
+            <a href="/sister-size-calculator">Sister Size Calculator<small>Equivalent cup volumes</small></a>
+            <a href="/brand-size-converter">Brand Size Converter<small>Wacoal, Skims, VS &amp; M&amp;S</small></a>
+          </div>
+          <div class="mega-col">
+            <h4>Specialty Calculators</h4>
+            <a href="/abtf-calculator">ABTF 6-Point Calculator<small>Advanced standing/leaning/lying</small></a>
+            <a href="/sports-bra-size-calculator">Sports Bra Calculator<small>Compression vs encapsulation</small></a>
+            <a href="/plus-size-bra-calculator">Plus Size Bra Calculator<small>Wider band &amp; cup spectrum</small></a>
+            <a href="/maternity-bra-size-calculator">Maternity &amp; Nursing<small>Changing postpartum shapes</small></a>
+          </div>
+          <div class="mega-col">
+            <h4>Fitting Guides</h4>
+            <a href="/how-to-measure-bra-size-at-home">How to Measure at Home<small>Visual tape placement guide</small></a>
+            <a href="/bra-size-chart-guide">Bra Size Chart Guide<small>International cup progression</small></a>
+            <a href="/sister-sizing-explained">Sister Sizing Explained<small>Cup volume physics</small></a>
+            <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit<small>Gore lift, quad-boob, digging</small></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Mobile nav -->
-<div class="mobile-nav" id="mobileNav">
-  <div class="mobile-nav-top">
-    <a href="/" class="logo">IM<span>Rango</span></a>
-    <button class="hamburger" id="closeMobileNav" aria-label="Close menu">✕</button>
-  </div>
-  <details class="mobile-accordion" open>
-    <summary>Core Calculators</summary>
-    <div class="mega-col">
-      <a href="/bra-size-calculator">Bra Size Calculator</a>
-      <a href="/cup-size-calculator">Cup Size Calculator</a>
-      <a href="/bust-size-calculator">Bust Size Calculator</a>
-      <a href="/band-size-calculator">Band Size Calculator</a>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-top">
+      <a href="/" class="logo">IM<span>Rango</span></a>
+      <button class="close-mobile-nav" id="closeMobileNav" aria-label="Close navigation menu" type="button">✕</button>
     </div>
-  </details>
-  <details class="mobile-accordion">
-    <summary>Conversion Tools</summary>
-    <div class="mega-col">
-      <a href="/bra-size-conversion">Bra Size Conversion</a>
-      <a href="/sister-size-calculator">Sister Size Calculator</a>
-      <a href="/brand-size-converter">Brand Size Converter</a>
-    </div>
-  </details>
-  <details class="mobile-accordion">
-    <summary>Specialty Calculators</summary>
-    <div class="mega-col">
-      <a href="/abtf-calculator">ABTF Calculator</a>
-      <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
-      <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
-      <a href="/maternity-bra-size-calculator">Maternity & Nursing</a>
-    </div>
-  </details>
-  <details class="mobile-accordion">
-    <summary>Guides</summary>
-    <div class="mega-col">
-      <div>
-        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
-        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
-        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
-        <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
-        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
-      </div>
-    </div>
-  </details>
-  <a class="nav-link" href="/bra-measurement-chart" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">Bra Measurement Chart</a>
-  <a href="/about" class="nav-link" style="display:block;padding:14px 0;font-family:var(--display);font-weight:700;font-size:18px;">About</a>
-</div>
+    
+    <a href="#calculator" class="btn btn-primary btn-block" style="margin-bottom:16px;" onclick="document.getElementById('closeMobileNav').click();">Try Size Calculator</a>
 
-  <div class="ruler" aria-hidden="true"></div>
-  <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
-<div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
-
-  <main id="main">
-    <section class="hero" id="calculator">
-  <div class="container">
-
-    <div class="hero-head">
-      <h1>Bra Size Calculator – Find Your Band &amp; Cup Size</h1>
-      <p>Just two measurements – underbust and bust – and we’ll give you your estimated US and UK bra size. It’s fast, private, and works for everyone.</p>
-    </div>
-
-    <!-- calculator tool – uses only global classes -->
-    <div class="tool-card">
-      <div class="tool-top">
-        <h2>Bra Size Calculator</h2>
-        <div class="unit-toggle" role="group" aria-label="Measurement unit">
-          <button type="button" id="unitIn" aria-pressed="true">in</button>
-          <button type="button" id="unitCm" aria-pressed="false">cm</button>
-        </div>
-      </div>
-
-      <form id="calcForm" novalidate>
-        <div class="form-grid">
-          <div class="field">
-            <label for="underbust">Underbust measurement</label>
-            <div class="field-input">
-              <input type="number" id="underbust" inputmode="decimal" step="0.5" min="20" max="60" placeholder="e.g. 32" required>
-              <span class="unit-suffix" id="suffix1">in</span>
-            </div>
-            <p class="field-hint">Measure snugly around your ribcage, just under the bust.</p>
-          </div>
-
-          <div class="field">
-            <label for="bust">Bust measurement</label>
-            <div class="field-input">
-              <input type="number" id="bust" inputmode="decimal" step="0.5" min="24" max="70" placeholder="e.g. 38" required>
-              <span class="unit-suffix" id="suffix2">in</span>
-            </div>
-            <p class="field-hint">Measure around the fullest part of your bust, tape level.</p>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block btn-lg calc-btn">Calculate My Size</button>
-      </form>
-
-      <div class="result-panel" id="resultPanel" aria-live="polite">
-        <div class="result-size" id="resultSize">34B</div>
-        <p id="resultNote">This is your estimated US band and cup size.</p>
-      </div>
-
-      <p class="tool-note">Want cup size only, or a different method? <a href="/calculators">See all 14 calculators ↓</a></p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ CONTENT SECTIONS ============ -->
-<section class="section">
-  <div class="container">
-
-    <h2>What Is a Bra Size, Anyway?</h2>
-    <p>A bra size has two parts: the <strong>band</strong> (the number) and the <strong>cup</strong> (the letter). The band wraps around your ribcage, and the cup holds your breasts. Together, they give you a size like <strong>34B</strong> or <strong>36D</strong>.</p>
-
-    <p>The band number comes from your underbust measurement – the part just below your breasts. The cup letter comes from the difference between your bust (fullest part) and your band. Every inch of difference is one cup letter: 1″ = A, 2″ = B, and so on.</p>
-
-    <h2>How to Measure at Home – Easy Steps</h2>
-    <p>You don’t need a professional fitter. Just follow these simple steps with a soft tape measure (like the kind used for sewing).</p>
-
-    <div class="guide-grid">
-      <div class="guide-card">
-        <h3>📏 1. Underbust</h3>
-        <p>Wrap the tape around your ribcage, right under your bust. Keep it snug but not tight. Take the measurement after you breathe out normally.</p>
-        <p><strong>Tip:</strong> If you get an odd number (like 31), round up to the next even number (32). That’s your band size.</p>
-      </div>
-      <div class="guide-card">
-        <h3>📐 2. Bust</h3>
-        <p>Measure around the fullest part of your bust – usually across the nipples. Keep the tape level and don’t pull it tight. It should sit gently against your skin.</p>
-        <p><strong>Tip:</strong> Take two or three measurements and average them. This gives you a more accurate number.</p>
-      </div>
-    </div>
-
-    <p>Now enter both numbers in the calculator above. It will do the math for you and show your size in seconds.</p>
-
-    <h2>Why Your Bra Size Might Change</h2>
-    <p>Your size can change over time – because of weight changes, pregnancy, or even the brand of bra you buy. That’s why it’s a good idea to measure yourself every few months. Our calculator gives you a reliable starting point every time.</p>
-
-    <h2>What About Sister Sizes?</h2>
-    <p>Sometimes your usual size is sold out, or a bra fits differently than expected. That’s when <strong>sister sizing</strong> helps. Sister sizes are bras that hold the same cup volume but have a different band and cup letter.</p>
-    <p>For example, if you wear <strong>34C</strong>, your sister sizes are <strong>32D</strong> (smaller band, bigger cup) and <strong>36B</strong> (bigger band, smaller cup). If the band feels too tight, try the next sister size up. If it’s too loose, go down.</p>
-
-    <div class="guide-card">
-      <p><strong>Need help finding a sister size?</strong></p>
-      <a href="/sister-size-calculator" class="btn btn-primary">Try Our Sister Size Calculator →</a>
-    </div>
-
-    <h2>US vs UK – What’s the Difference?</h2>
-    <p>The band number is the same in both systems – a 34 is a 34 everywhere. But from cup size D and above, the letters change. For example, a US <strong>DDD</strong> is a UK <strong>E</strong>. A US <strong>G</strong> is a UK <strong>F</strong>. If you’re shopping from a UK brand, use our <a href="/bra-size-conversion">conversion tool</a> to make sure you get the right letter.</p>
-
-    <h2>Why Trust This Calculator?</h2>
-    <ul>
-      <li><strong>It’s free</strong> – no sign‑up, no hidden fees.</li>
-      <li><strong>It’s private</strong> – all calculations happen in your browser, so we never see your measurements.</li>
-      <li><strong>It’s accurate</strong> – we use the same formula that professional fitters use.</li>
-      <li><strong>We update it</strong> – our sizing charts are checked regularly to match current brands.</li>
-    </ul>
-    <p>Remember: your result is a <em>starting point</em>. Because every brand and fabric is different, we always recommend trying on a bra before you buy – or ordering a few sister sizes to find the one that feels best.</p>
-
-    <div class="guide-card">
-      <p><strong>Ready to get your perfect size?</strong></p>
-      <p>Head back to the calculator above and enter your measurements right now.</p>
-      <a href="#calculator" class="btn btn-primary">Go to Calculator ↑</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- JavaScript (same as homepage) -->
-<script>
-  // Unit toggle
-  const unitIn = document.getElementById('unitIn');
-  const unitCm = document.getElementById('unitCm');
-  const underbustInput = document.getElementById('underbust');
-  const bustInput = document.getElementById('bust');
-  const suffix1 = document.getElementById('suffix1');
-  const suffix2 = document.getElementById('suffix2');
-  let currentUnit = 'in';
-
-  function setUnit(unit) {
-    if (unit === currentUnit) return;
-    currentUnit = unit;
-    unitIn.setAttribute('aria-pressed', String(unit === 'in'));
-    unitCm.setAttribute('aria-pressed', String(unit === 'cm'));
-    suffix1.textContent = unit;
-    suffix2.textContent = unit;
-    if (underbustInput.value) {
-      const v = parseFloat(underbustInput.value);
-      underbustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
-    }
-    if (bustInput.value) {
-      const v = parseFloat(bustInput.value);
-      bustInput.value = unit === 'cm' ? Math.round(v * 2.54 * 10) / 10 : Math.round((v / 2.54) * 10) / 10;
-    }
-    underbustInput.placeholder = unit === 'cm' ? 'e.g. 81' : 'e.g. 32';
-    bustInput.placeholder = unit === 'cm' ? 'e.g. 96' : 'e.g. 38';
-  }
-  unitIn.addEventListener('click', () => setUnit('in'));
-  unitCm.addEventListener('click', () => setUnit('cm'));
-
-  // Main logic
-  const cupLetters = ['AA','A','B','C','D','DD/E','DDD/F','G','H','I','J'];
-
-  function calculateSize(underbustVal, bustVal, unit) {
-    let underbustIn = unit === 'cm' ? underbustVal / 2.54 : underbustVal;
-    let bustIn = unit === 'cm' ? bustVal / 2.54 : bustVal;
-    const base = Math.round(underbustIn);
-    const band = (base % 2 === 0) ? base + 4 : base + 5;
-    let diff = Math.round(bustIn) - band;
-    if (diff < 0) diff = 0;
-    const cup = cupLetters[Math.min(diff, cupLetters.length - 1)];
-    return { band, cup };
-  }
-
-  const form = document.getElementById('calcForm');
-  const resultPanel = document.getElementById('resultPanel');
-  const resultSize = document.getElementById('resultSize');
-  const resultNote = document.getElementById('resultNote');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const u = parseFloat(underbustInput.value);
-    const b = parseFloat(bustInput.value);
-    if (!u || !b || b <= u) {
-      resultPanel.classList.add('show');
-      resultSize.textContent = '—';
-      resultNote.textContent = 'Enter a valid underbust and bust measurement (bust should be larger than underbust).';
-      return;
-    }
-    const { band, cup } = calculateSize(u, b, currentUnit);
-    resultSize.textContent = `${band}${cup}`;
-    resultNote.textContent = 'This is your estimated US band and cup size. UK sizing usually matches the letter; EU sizing differs — use the conversion calculator to check.';
-    resultPanel.classList.add('show');
-  });
-</script>
-  </main>
-  <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>Calculators</h4>
+    <details class="mobile-accordion" open>
+      <summary>Core Sizing Tools</summary>
+      <div class="mega-col">
         <a href="/bra-size-calculator">Bra Size Calculator</a>
         <a href="/cup-size-calculator">Cup Size Calculator</a>
         <a href="/bust-size-calculator">Bust Size Calculator</a>
-        <a href="/bra-size-conversion">Bra Size Conversion</a>
+        <a href="/band-size-calculator">Band Size Calculator</a>
       </div>
-      <div>
-        <div>
-          <h4>Guides</h4>
+    </details>
+
+    <details class="mobile-accordion">
+      <summary>Conversion &amp; Brands</summary>
+      <div class="mega-col">
+        <a href="/bra-size-conversion">Bra Size Conversion (US / UK / EU)</a>
+        <a href="/sister-size-calculator">Sister Size Calculator</a>
+        <a href="/brand-size-converter">Brand Size Converter</a>
+      </div>
+    </details>
+
+    <details class="mobile-accordion">
+      <summary>Specialty Calculators</summary>
+      <div class="mega-col">
+        <a href="/abtf-calculator">ABTF 6-Measurement Calculator</a>
+        <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+        <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+        <a href="/maternity-bra-size-calculator">Maternity &amp; Nursing</a>
+      </div>
+    </details>
+
+    <details class="mobile-accordion">
+      <summary>Fitting Guides</summary>
+      <div class="mega-col">
+        <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
+        <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
+        <a href="/sister-sizing-explained">Sister Sizing Explained</a>
+        <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+      </div>
+    </details>
+
+    <a href="/bra-measurement-chart" class="mobile-nav-direct-link">Bra Measurement Chart</a>
+    <a href="/about" class="mobile-nav-direct-link">About IMRango</a>
+  </div>
+
+  <div class="hairline-strip" aria-hidden="true"></div>
+
+  <!-- ============ HIGH-RPM AD SLOT 1: TOP RESPONSIVE LEADERBOARD ============ -->
+  <div class="container ad-slot-wrapper">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-box ad-leaderboard">
+      <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+      <div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO & WORKBENCH ============ -->
+    <section class="hero" id="calculator">
+      <div class="container">
+        
+        <div class="hero-head">
+          <div class="hero-tag">Precision Fit Tool</div>
+          <h1>Bra Size Calculator – Find Your Band &amp; Cup Size</h1>
+          <p>Get your true bra size in seconds. Compare Modern Snug, Victoria's Secret +4, and ABTF 6-measurement methods across US, UK, EU, AU, and FR sizing.</p>
+        </div>
+
+        <div class="clean-fact-card">
+          <strong>Key Sizing Principle:</strong> 85% of bra support originates from the ribcage band, not shoulder straps. Retail "+4 sizing" artificially inflates the band and deflates the cup. A snug, level band ensures proper posture and zero shoulder digging.
+        </div>
+
+        <!-- ============ CALCULATION WORKBENCH ============ -->
+        <div class="calc-workbench-layout">
+
+          <!-- LEFT PANE: CALCULATOR INPUTS -->
+          <div class="calc-card-main">
+            <div class="calc-card-header">
+              <div>
+                <h2 class="calc-title">Measurements</h2>
+                <p class="calc-subtitle">Enter numbers or adjust sliders for live calculation</p>
+              </div>
+
+              <!-- Mode Switcher Tabs -->
+              <div class="sober-tabs" role="tablist" aria-label="Calculation Mode">
+                <button type="button" class="sober-tab active" id="tabStandard" role="tab" aria-selected="true" onclick="switchMethod('standard')">Standard (2-Point)</button>
+                <button type="button" class="sober-tab" id="tabAbtf" role="tab" aria-selected="false" onclick="switchMethod('abtf')">ABTF (6-Point)</button>
+              </div>
+            </div>
+
+            <!-- Configuration Bar (Unit, Region, Brand Algorithm) -->
+            <div class="config-bar">
+              <div class="config-item">
+                <label for="unitSelect">Unit System</label>
+                <select id="unitSelect" class="config-select">
+                  <option value="in" selected>Inches (in)</option>
+                  <option value="cm">Centimeters (cm)</option>
+                </select>
+              </div>
+              <div class="config-item">
+                <label for="regionSelect">Sizing Standard</label>
+                <select id="regionSelect" class="config-select">
+                  <option value="us" selected>United States (US)</option>
+                  <option value="uk">United Kingdom (UK)</option>
+                  <option value="eu">Europe / International (EU)</option>
+                  <option value="au">Australia / NZ (AU)</option>
+                  <option value="fr">France / Spain (FR)</option>
+                </select>
+              </div>
+              <div class="config-item">
+                <label for="brandSelect">Brand Algorithm</label>
+                <select id="brandSelect" class="config-select">
+                  <option value="standard" selected>Standard Ergonomic Snug</option>
+                  <option value="victoria">Victoria's Secret (+4 Method)</option>
+                  <option value="skims">Skims / Aerie Sizing</option>
+                  <option value="wacoal">Wacoal Fitting</option>
+                  <option value="thirdlove">ThirdLove Half-Cup</option>
+                  <option value="marks">Marks &amp; Spencer (UK)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Standard 2-Point Form -->
+            <div id="formStandard" class="measurements-container">
+              <div class="input-row">
+                
+                <!-- Underbust Field -->
+                <div class="field-group">
+                  <div class="field-header">
+                    <label for="underbust" class="field-label">1. Snug Underbust</label>
+                    <span class="field-badge">Ribcage</span>
+                  </div>
+                  <div class="stepper-box">
+                    <button type="button" class="stepper-btn" data-target="underbust" data-dir="-1" data-step="0.5" aria-label="Decrease underbust">−</button>
+                    <input type="number" id="underbust" class="stepper-input" step="0.5" min="20" max="65" value="32" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                    <button type="button" class="stepper-btn" data-target="underbust" data-dir="1" data-step="0.5" aria-label="Increase underbust">+</button>
+                  </div>
+                  <div class="slider-wrapper">
+                    <input type="range" class="slider-sync" data-target="underbust" min="22" max="54" step="0.5" value="32" aria-label="Underbust slider">
+                  </div>
+                  <p class="field-helper">Measure directly under your breasts where your bra band sits, snug on normal exhale.</p>
+                </div>
+
+                <!-- Bust Field -->
+                <div class="field-group">
+                  <div class="field-header">
+                    <label for="bust" class="field-label">2. Full Bust</label>
+                    <span class="field-badge">Apex</span>
+                  </div>
+                  <div class="stepper-box">
+                    <button type="button" class="stepper-btn" data-target="bust" data-dir="-1" data-step="0.5" aria-label="Decrease bust">−</button>
+                    <input type="number" id="bust" class="stepper-input" step="0.5" min="24" max="75" value="36" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                    <button type="button" class="stepper-btn" data-target="bust" data-dir="1" data-step="0.5" aria-label="Increase bust">+</button>
+                  </div>
+                  <div class="slider-wrapper">
+                    <input type="range" class="slider-sync" data-target="bust" min="26" max="62" step="0.5" value="36" aria-label="Bust slider">
+                  </div>
+                  <p class="field-helper">Measure around the fullest part of your bust with the tape level front to back.</p>
+                </div>
+
+              </div>
+
+              <!-- Shape Presets -->
+              <div class="shape-quick-picker">
+                <div class="shape-picker-title">
+                  <span>Breast Shape Profile</span>
+                  <span style="font-weight:400; font-size:11px; text-transform:none; color:var(--ink-muted);">Refines cup recommendations</span>
+                </div>
+                <div class="shape-pills-row" id="shapePills">
+                  <button type="button" class="shape-pill active" data-shape="even" onclick="selectShape('even', this)">Even Fullness</button>
+                  <button type="button" class="shape-pill" data-shape="top" onclick="selectShape('top', this)">Full on Top</button>
+                  <button type="button" class="shape-pill" data-shape="bottom" onclick="selectShape('bottom', this)">Full on Bottom</button>
+                  <button type="button" class="shape-pill" data-shape="shallow" onclick="selectShape('shallow', this)">Shallow Profile</button>
+                  <button type="button" class="shape-pill" data-shape="projected" onclick="selectShape('projected', this)">Projected Profile</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ABTF 6-Measurement Form (Hidden by Default) -->
+            <div id="formAbtf" class="measurements-container" style="display:none;">
+              <p style="font-size:13.5px; color:var(--ink-secondary); margin-bottom:12px;">
+                The ABTF method accounts for tissue projection and density by measuring in 3 body postures.
+              </p>
+              <div class="abtf-grid">
+                <div class="field-group">
+                  <label for="looseUb" class="field-label">Loose Underbust</label>
+                  <div class="stepper-box">
+                    <input type="number" id="looseUb" class="stepper-input" step="0.5" value="33" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Skin contact only, relaxed inhale.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="snugUb" class="field-label">Snug Underbust</label>
+                  <div class="stepper-box">
+                    <input type="number" id="snugUb" class="stepper-input" step="0.5" value="32" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Firm, natural bra band exhale tension.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="tightUb" class="field-label">Tight Underbust</label>
+                  <div class="stepper-box">
+                    <input type="number" id="tightUb" class="stepper-input" step="0.5" value="30" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Pulled as tight as comfortably possible.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="standingBust" class="field-label">Standing Bust</label>
+                  <div class="stepper-box">
+                    <input type="number" id="standingBust" class="stepper-input" step="0.5" value="36" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Standing upright across nipples.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="leaningBust" class="field-label">Leaning Bust (90°)</label>
+                  <div class="stepper-box">
+                    <input type="number" id="leaningBust" class="stepper-input" step="0.5" value="38" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Bend at hips to capture projected volume.</p>
+                </div>
+
+                <div class="field-group">
+                  <label for="lyingBust" class="field-label">Lying Down Bust</label>
+                  <div class="stepper-box">
+                    <input type="number" id="lyingBust" class="stepper-input" step="0.5" value="37" inputmode="decimal">
+                    <span class="stepper-unit unit-label">in</span>
+                  </div>
+                  <p class="field-helper">Flat on back across fullest projection.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <div style="margin-top:24px;">
+              <button type="button" class="btn btn-primary btn-block btn-lg" onclick="calculateBraSize()">
+                Recalculate Bra Size
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT PANE: RESULTS COCKPIT -->
+          <div class="results-cockpit" id="resultsCockpit">
+            
+            <div class="result-card-hero" id="resultHeroCard">
+              <div class="result-badge-top">
+                <span class="result-kicker">Recommended Size</span>
+                <span class="brand-applied-chip" id="appliedBrandTag">Standard Ergonomic</span>
+              </div>
+
+              <!-- Live Dynamic Silhouette Display -->
+              <div class="size-visual-stage">
+                <div class="size-big-block">
+                  <div class="size-big-number" id="resPrimarySize">32D</div>
+                  <div class="size-band-cup-detail" id="resBandBreakdown">Band: 32 | Cup: D</div>
+                  <div class="size-region-subtitle" id="resRegionTag">US Sizing System</div>
+                </div>
+
+                <!-- Vector Silhouette Graphic -->
+                <div class="silhouette-box" title="Vector silhouette preview">
+                  <svg class="silhouette-svg" viewBox="0 0 100 80" aria-label="Breast silhouette diagram">
+                    <path class="silhouette-wire-path" id="svgWire" d="M 20 62 Q 50 67 80 62" />
+                    <path class="silhouette-band-path" id="svgBand" d="M 10 65 L 90 65" />
+                    <path class="silhouette-cup-path" id="svgCup" d="M 22 62 Q 50 18 78 62 Z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="result-fit-summary" id="resultFitSummary">
+                Your ribcage measurement translates to a <strong>32 band</strong>. With a 4″ differential to your 36″ bust line, your cup volume corresponds to a true <strong>D cup</strong>.
+              </div>
+
+              <!-- Global International Sizing Conversion Grid -->
+              <div class="intl-matrix">
+                <div class="intl-cell" id="cellUs">
+                  <span class="intl-country">US</span>
+                  <span class="intl-val" id="resUsVal">32D</span>
+                </div>
+                <div class="intl-cell" id="cellUk">
+                  <span class="intl-country">UK</span>
+                  <span class="intl-val" id="resUkVal">32D</span>
+                </div>
+                <div class="intl-cell" id="cellEu">
+                  <span class="intl-country">EU</span>
+                  <span class="intl-val" id="resEuVal">70D</span>
+                </div>
+                <div class="intl-cell" id="cellAu">
+                  <span class="intl-country">AU</span>
+                  <span class="intl-val" id="resAuVal">10D</span>
+                </div>
+                <div class="intl-cell" id="cellFr">
+                  <span class="intl-country">FR</span>
+                  <span class="intl-val" id="resFrVal">85D</span>
+                </div>
+              </div>
+
+              <!-- Sister Sizes Explorer Strip -->
+              <div class="sister-box">
+                <div class="sister-title">
+                  <span>Sister Sizes</span>
+                  <span style="font-weight:400; font-size:11px; text-transform:none; color:var(--ink-muted);">Identical cup volume</span>
+                </div>
+                <div class="sister-grid" id="sisterGrid">
+                  <div class="sister-item">
+                    <span class="sister-label">Tighter Band</span>
+                    <span class="sister-val" id="sisterTightVal">30DD</span>
+                    <div class="sister-desc">Choose if the 32 band rides up in back</div>
+                  </div>
+                  <div class="sister-item">
+                    <span class="sister-label">Looser Band</span>
+                    <span class="sister-val" id="sisterLooseVal">34C</span>
+                    <div class="sister-desc">Choose if the 32 band feels overly tight</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bra Style Recommendations -->
+              <div class="style-match-box">
+                <div class="style-match-title">Recommended Bra Cuts</div>
+                <div class="style-match-pills" id="styleMatchPills">
+                  <span class="style-match-tag">Balconette</span>
+                  <span class="style-match-tag">Plunge</span>
+                  <span class="style-match-tag">Demi Cup</span>
+                </div>
+              </div>
+
+              <!-- Action Controls: Copy, Save, Print -->
+              <div class="result-actions">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="saveToPassport()">
+                  Save Size
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="copyResults()">
+                  Copy Sizes
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm" onclick="window.print()">
+                  Print / PDF
+                </button>
+              </div>
+            </div>
+
+            <!-- Instant Fit Diagnostic Checklist -->
+            <div class="fit-diagnostic-card">
+              <h4>30-Second Fit Check</h4>
+              <ul class="fit-diagnostic-list">
+                <li class="fit-diagnostic-item">
+                  <span class="icon">✓</span>
+                  <span><strong>Sternum Contact:</strong> Center gore wires must lay flat against your breastbone without tilting or floating.</span>
+                </li>
+                <li class="fit-diagnostic-item">
+                  <span class="icon">✓</span>
+                  <span><strong>Horizontal Anchorage:</strong> Band must sit horizontal across your back, parallel to the floor without riding up.</span>
+                </li>
+                <li class="fit-diagnostic-item">
+                  <span class="icon">✓</span>
+                  <span><strong>Armpit Wire Curve:</strong> Wires should encircle breast tissue under the armpit without pinching mammary tissue.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ HIGH-RPM AD SLOT 2: IN-FEED NATIVE PLACEMENT ============ -->
+    <div class="container ad-slot-wrapper">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-box ad-infeed">
+        <script>
+          atOptions = {
+            'key' : 'bed52797bfdfe0042d4e4dfb3cec902c',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/bed52797bfdfe0042d4e4dfb3cec902c/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- ============ EDITORIAL & GUIDES ============ -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        
+        <div class="section-head">
+          <h2>How to Measure Your Bra Size at Home</h2>
+          <p>Follow these four simple steps with a flexible cloth tape measure for an accurate fit.</p>
+        </div>
+
+        <!-- Answer Engine Citation Capsule (GEO / AEO Optimized) -->
+        <article class="answer-capsule" itemscope itemtype="https://schema.org/DefinedTerm">
+          <div class="answer-capsule-header">
+            <span class="answer-badge">Quick Answer &amp; Sizing Formula</span>
+            <span class="answer-eeat">Anthropometric fit methodology • Updated 2026</span>
+          </div>
+          <p class="answer-lead" itemprop="description">
+            To calculate your true bra size: <strong>Band Size</strong> equals your snug ribcage underbust measurement rounded to the nearest even integer (e.g. 31″ → 32). <strong>Cup Size</strong> equals the difference between your full bust circumference and calculated band size, where each 1-inch difference corresponds to one cup letter (<strong>1″ = A, 2″ = B, 3″ = C, 4″ = D, 5″ = DD, 6″ = DDD/F</strong>).
+          </p>
+          <div class="formula-grid">
+            <div class="formula-box">
+              <h4>1. Band Formula</h4>
+              <span class="formula-code">Band = Even(Snug Underbust)</span>
+              <p>Modern ergonomic standard. Never add +4 inches; 85% of breast weight must be supported by the ribcage band.</p>
+            </div>
+            <div class="formula-box">
+              <h4>2. Cup Formula</h4>
+              <span class="formula-code">Cup = Full Bust – Band Size</span>
+              <p>1″ = A, 2″ = B, 3″ = C, 4″ = D, 5″ = DD, 6″ = DDD/F, 7″ = G, 8″ = H. For asymmetrical breasts, size to the fuller breast.</p>
+            </div>
+            <div class="formula-box">
+              <h4>3. Sister Sizing Equivalence</h4>
+              <span class="formula-code">Band ± 2 &harr; Cup &mp; 1</span>
+              <p>If band rides up, go down 1 band size and up 1 cup letter to preserve identical volume (e.g. 36B &rarr; 34C &rarr; 32D).</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Snug Underbust</h3>
+            <p>Stand straight, exhale naturally, and wrap the tape around your ribcage directly below your breasts. Keep it parallel to the floor and snug against skin.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Full Bust Line</h3>
+            <p>Measure across the fullest projection of your breasts (usually across nipples). Do not pull tight; the tape should glide gently without compressing tissue.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Calculate Band</h3>
+            <p>In modern sizing, your band equals your snug underbust rounded to the nearest even number. Avoid adding 4 inches, which ruins band support.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Determine Cup</h3>
+            <p>Subtract your calculated band from your bust measurement. Each 1-inch difference represents one cup letter (1″ = A, 2″ = B, 3″ = C, 4″ = D, 5″ = DD).</p>
+          </div>
+        </div>
+
+        <!-- Cup Depth Reference Table -->
+        <div class="section-head" style="margin-top:48px;">
+          <h2>Cup Size Difference Chart (Inches &amp; Centimeters)</h2>
+          <p>The difference between your bust circumference and calculated band determines your cup letter.</p>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Bust - Band Difference</th>
+                <th>Metric Difference</th>
+                <th>US Cup Letter</th>
+                <th>UK Cup Letter</th>
+                <th>EU Cup Letter</th>
+                <th>Typical Breast Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>0 to 1 inch</strong></td>
+                <td>0 to 2.5 cm</td>
+                <td>AA / A</td>
+                <td>AA / A</td>
+                <td>AA / A</td>
+                <td>150 – 250 cc</td>
+              </tr>
+              <tr>
+                <td><strong>1 to 2 inches</strong></td>
+                <td>2.5 to 5 cm</td>
+                <td>B</td>
+                <td>B</td>
+                <td>B</td>
+                <td>250 – 350 cc</td>
+              </tr>
+              <tr>
+                <td><strong>2 to 3 inches</strong></td>
+                <td>5 to 7.5 cm</td>
+                <td>C</td>
+                <td>C</td>
+                <td>C</td>
+                <td>350 – 480 cc</td>
+              </tr>
+              <tr>
+                <td><strong>3 to 4 inches</strong></td>
+                <td>7.5 to 10 cm</td>
+                <td>D</td>
+                <td>D</td>
+                <td>D</td>
+                <td>480 – 620 cc</td>
+              </tr>
+              <tr>
+                <td><strong>4 to 5 inches</strong></td>
+                <td>10 to 12.5 cm</td>
+                <td>DD (E)</td>
+                <td>DD</td>
+                <td>E</td>
+                <td>620 – 780 cc</td>
+              </tr>
+              <tr>
+                <td><strong>5 to 6 inches</strong></td>
+                <td>12.5 to 15 cm</td>
+                <td>DDD / F</td>
+                <td>E</td>
+                <td>F</td>
+                <td>780 – 950 cc</td>
+              </tr>
+              <tr>
+                <td><strong>6 to 7 inches</strong></td>
+                <td>15 to 17.5 cm</td>
+                <td>G</td>
+                <td>F</td>
+                <td>G</td>
+                <td>950 – 1150 cc</td>
+              </tr>
+              <tr>
+                <td><strong>7 to 8 inches</strong></td>
+                <td>17.5 to 20 cm</td>
+                <td>H</td>
+                <td>FF</td>
+                <td>H</td>
+                <td>1150 – 1350 cc</td>
+              </tr>
+              <tr>
+                <td><strong>8 to 9 inches</strong></td>
+                <td>20 to 22.5 cm</td>
+                <td>I</td>
+                <td>G</td>
+                <td>I</td>
+                <td>1350 – 1600 cc</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FIT PROBLEM CHECKER & DIAGNOSTICS ============ -->
+    <section class="section" id="fit-checker" style="background:var(--surface-raised); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="section-head">
+          <h2>Troubleshooting Common Bra Fit Issues</h2>
+          <p>How to diagnose your current bra and discover exactly which adjustment to make.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 01</span>
+            <h3>Band Rides Up Your Back</h3>
+            <p><strong>Cause:</strong> Your band is too loose. Shoulder straps take all the weight and pull the band upward between your shoulder blades.</p>
+            <p><strong>Remedy:</strong> Sister size down one band size (e.g., from 36B to 34C). Fasten on the loosest hook when new.</p>
+          </div>
+
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 02</span>
+            <h3>Shoulder Straps Dig in Deep</h3>
+            <p><strong>Cause:</strong> Straps are carrying the load the band should hold. 85% of breast weight should be anchored by the ribcage band, not your shoulders.</p>
+            <p><strong>Remedy:</strong> A snugger, properly fitted band relieves shoulder strain immediately.</p>
+          </div>
+
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 03</span>
+            <h3>Cup Spillage ("Quad-Boob")</h3>
+            <p><strong>Cause:</strong> Breast tissue bulges over the neckline or out toward the underarms. Your cups are at least 1–2 volumes too small.</p>
+            <p><strong>Remedy:</strong> Keep your band size the same and move up 1 to 2 cup letters (e.g., 34C to 34D or 34DD).</p>
+          </div>
+
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 04</span>
+            <h3>Underwire Pokes Breast Tissue</h3>
+            <p><strong>Cause:</strong> Underwire diameter is too narrow and sits directly on mammary glands rather than resting flat on your ribcage.</p>
+            <p><strong>Remedy:</strong> Size up in cup volume or switch to an open-wire, wide-root bra style designed for your breast shape.</p>
+          </div>
+
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 05</span>
+            <h3>Gapping at the Top of the Cup</h3>
+            <p><strong>Cause:</strong> Usually caused by a band that is too loose (cups tilt outward away from the body) or a cup shape mismatch (shallow breasts in a projected cup).</p>
+            <p><strong>Remedy:</strong> Try a snugger band or a demi/balconette cut before assuming your cup size is too large.</p>
+          </div>
+
+          <div class="calc-card-hub">
+            <span class="hub-meta">Diagnosis 06</span>
+            <h3>Floating Center Gore</h3>
+            <p><strong>Cause:</strong> The triangle between the cups doesn't press against your sternum. The cups lack enough depth to allow the wire to settle against your chest.</p>
+            <p><strong>Remedy:</strong> Increase cup size by 1–2 letters until the center wire sits firmly against your breastbone.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ HIGH-RPM AD SLOT 3: PRE-FAQ LEADERBOARD ============ -->
+    <div class="container ad-slot-wrapper">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-box ad-leaderboard">
+        <script async="async" data-cfasync="false" src="https://pl29676384.effectivecpmnetwork.com/79c41b6e6c590a043b788b1b40db50de/invoke.js"></script>
+        <div id="container-79c41b6e6c590a043b788b1b40db50de"></div>
+      </div>
+    </div>
+
+    <!-- ============ FAQ SECTION (HIGHLY CITEABLE ANSWER BLOCKS) ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        
+        <div class="section-head">
+          <h2>Frequently Asked Questions</h2>
+          <p>Clear, direct answers to common bra sizing questions.</p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-card" open>
+            <summary>Why does Victoria's Secret give me a 36B when I measure a 32DD?</summary>
+            <div class="faq-content">
+              <p>Victoria's Secret uses the traditional <strong>+4 band method</strong>. If your underbust is 32 inches, they add 4 inches to assign you a 36 band. Because a 36 band is much wider, the cup volume must shrink to keep overall capacity similar, putting you into a B cup. In reality, a 36 band will ride up your back and fail to provide support. A 32DD provides true ribcage anchorage and proper cup depth.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary>What is sister sizing and when should I use it?</summary>
+            <div class="faq-content">
+              <p>Sister sizes are pairs of bra sizes that share identical cup volume. If you wear a <strong>34C</strong>, its sister sizes are <strong>32D</strong> (tighter band) and <strong>36B</strong> (looser band). Use sister sizing when a particular bra style runs tight or loose in the band, or when your exact size is out of stock.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary>Why do UK and US cup letters diverge after D?</summary>
+            <div class="faq-content">
+              <p>US sizing uses: D, DD, DDD/F, G, H, I, J, K. UK sizing uses double letters for specific increments: D, DD, E, F, FF, G, GG, H, HH, J, JJ. Therefore, a US 34DDD is equivalent to a UK 34E, while a US 34H is a UK 34FF. Many high-support bra brands (Freya, Panache, Elomi) use UK sizing.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary>Should I measure over a bra or with bare breasts?</summary>
+            <div class="faq-content">
+              <p>For your <strong>underbust</strong>, measure directly against bare skin. For your <strong>bust</strong>, you can measure braless or wearing a thin, unpadded, non-push-up bra. If your breast tissue is soft or pendulous, the leaning 90° measurement in our ABTF mode gives the most accurate representation of breast volume without needing a bra.</p>
+            </div>
+          </details>
+
+          <details class="faq-card">
+            <summary>Which hook should a new bra fasten on?</summary>
+            <div class="faq-content">
+              <p>A new bra should fit snugly on the <strong>loosest hook</strong>. Over months of wear and washing, the elastane in the band naturally relaxes. As the band stretches out, you gradually move to the middle and tightest hooks to maintain optimal support.</p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ MOBILE STICKY BOTTOM ANCHOR AD ============ -->
+  <div class="mobile-ad-anchor" id="mobileAdAnchor">
+    <div class="mobile-ad-anchor-header">
+      <span class="ad-label" style="margin:0;">ADVERTISEMENT</span>
+      <button class="mobile-ad-anchor-close" id="closeMobileAd" aria-label="Dismiss mobile advertisement" type="button">✕ Dismiss</button>
+    </div>
+    <div style="width:320px; height:50px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+      <script>
+        atOptions = {
+          'key' : 'bed52797bfdfe0042d4e4dfb3cec902c',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/bed52797bfdfe0042d4e4dfb3cec902c/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- ============ SITE FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Core Calculators</h4>
+          <a href="/bra-size-calculator">Bra Size Calculator</a>
+          <a href="/cup-size-calculator">Cup Size Calculator</a>
+          <a href="/bust-size-calculator">Bust Size Calculator</a>
+          <a href="/band-size-calculator">Band Size Calculator</a>
+          <a href="/sister-size-calculator">Sister Size Calculator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Specialty Tools</h4>
+          <a href="/abtf-calculator">ABTF 6-Point Calculator</a>
+          <a href="/sports-bra-size-calculator">Sports Bra Calculator</a>
+          <a href="/plus-size-bra-calculator">Plus Size Bra Calculator</a>
+          <a href="/maternity-bra-size-calculator">Maternity Bra Calculator</a>
+          <a href="/breast-volume-calculator">Breast Volume (cc)</a>
+        </div>
+        <div class="footer-col">
+          <h4>Guides &amp; Editorial</h4>
           <a href="/how-to-measure-bra-size-at-home">How to Measure at Home</a>
           <a href="/bra-size-chart-guide">Bra Size Chart Guide</a>
           <a href="/sister-sizing-explained">Sister Sizing Explained</a>
-          <a href="/how-to-measure-sports-bra">How to Measure for a Sports Bra</a>
           <a href="/signs-your-bra-doesnt-fit">Signs Your Bra Doesn't Fit</a>
+          <a href="/editorial-policy">Editorial &amp; Fit Methodology</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company &amp; Legal</h4>
+          <a href="/about">About IMRango</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/disclaimer">Medical &amp; Fit Disclaimer</a>
+          <a href="/sitemap">HTML Sitemap</a>
         </div>
       </div>
-      <div>
-        <h4>Company</h4>
-        <a href="/about">About Us</a>
-        <a href="/contact">Contact</a>
-        <a href="/editorial-policy">Editorial Policy</a>
-        <a href="/sitemap">Sitemap</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-of-service">Terms of Service</a>
-        <a href="/disclaimer">Disclaimer</a>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 IMRango. All rights reserved. Free, private, client-side bra sizing calculations.
+        </div>
+        <div>
+          Calculated sizes are professional starting points. Fit varies by bra style and breast shape.
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 IM Rango. All rights reserved.</span>
-      <span>Estimates only – not a substitute for a professional fitting.</span>
-    </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- ============ CORE CLIENT-SIDE CALCULATION ENGINE ============ -->
+  <script>
+    // Cup Progressions by Region
+    const US_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'DDD/F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+    const UK_CUPS = ['AA', 'A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ'];
+    const EU_CUPS = ['AA', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'];
+    const AU_CUPS = UK_CUPS;
+    const FR_CUPS = EU_CUPS;
+
+    let currentMethod = 'standard';
+    let currentShape = 'even';
+
+    // Switch between Standard (2-point) and ABTF (6-point)
+    function switchMethod(method) {
+      currentMethod = method;
+      const tabStandard = document.getElementById('tabStandard');
+      const tabAbtf = document.getElementById('tabAbtf');
+      const formStandard = document.getElementById('formStandard');
+      const formAbtf = document.getElementById('formAbtf');
+
+      if (method === 'standard') {
+        tabStandard.classList.add('active');
+        tabStandard.setAttribute('aria-selected', 'true');
+        tabAbtf.classList.remove('active');
+        tabAbtf.setAttribute('aria-selected', 'false');
+        formStandard.style.display = 'flex';
+        formAbtf.style.display = 'none';
+      } else {
+        tabAbtf.classList.add('active');
+        tabAbtf.setAttribute('aria-selected', 'true');
+        tabStandard.classList.remove('active');
+        tabStandard.setAttribute('aria-selected', 'false');
+        formStandard.style.display = 'none';
+        formAbtf.style.display = 'block';
+      }
+      calculateBraSize();
+    }
+
+    // Breast Shape Selection
+    function selectShape(shape, btn) {
+      currentShape = shape;
+      document.querySelectorAll('.shape-pill').forEach(p => p.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      calculateBraSize();
+    }
+
+    // Helper: Safely parse input value
+    function getVal(id) {
+      const el = document.getElementById(id);
+      if (!el) return 0;
+      const v = parseFloat(el.value);
+      return isNaN(v) ? 0 : v;
+    }
+
+    // Helper: Convert to inches
+    function toInches(val, unit) {
+      return unit === 'cm' ? val / 2.54 : val;
+    }
+
+    // Helper: Format regional size representation
+    function formatRegional(usBand, cupIdx, region) {
+      const boundedCup = Math.max(0, Math.min(cupIdx, US_CUPS.length - 1));
+      if (region === 'uk') return `${usBand}${UK_CUPS[boundedCup]}`;
+      if (region === 'eu') return `${Math.round((usBand - 32) * 2.5 + 70)}${EU_CUPS[boundedCup]}`;
+      if (region === 'au') return `${usBand - 22}${AU_CUPS[boundedCup]}`;
+      if (region === 'fr') return `${Math.round((usBand - 32) * 2.5 + 70) + 15}${FR_CUPS[boundedCup]}`;
+      return `${usBand}${US_CUPS[boundedCup]}`;
+    }
+
+    // Update Minimalist Vector Silhouette Avatar
+    function updateSilhouette(band, cupIdx) {
+      const svgCup = document.getElementById('svgCup');
+      if (!svgCup) return;
+
+      const apexY = Math.max(4, 45 - (cupIdx * 3.5));
+      const widthSpread = Math.min(10, cupIdx * 0.8);
+      const startX = 22 - widthSpread;
+      const endX = 78 + widthSpread;
+
+      let controlX = 50;
+      let controlY = apexY;
+      if (currentShape === 'top') {
+        controlY -= 3;
+      } else if (currentShape === 'bottom') {
+        controlY += 3;
+      } else if (currentShape === 'projected') {
+        controlY -= 5;
+      } else if (currentShape === 'shallow') {
+        controlY += 4;
+      }
+
+      svgCup.setAttribute('d', `M ${startX} 62 Q ${controlX} ${controlY} ${endX} 62 Z`);
+    }
+
+    // Update Curated Bra Cut Tags
+    function updateBraStyleTags(cupIdx, shape) {
+      const container = document.getElementById('styleMatchPills');
+      if (!container) return;
+
+      let tags = [];
+      if (shape === 'shallow') {
+        tags = ['Demi Cup', 'Balconette', 'Wireless Bralette'];
+      } else if (shape === 'projected') {
+        tags = ['Plunge (Deep V)', 'Unlined Seamed Cups', 'Side Support'];
+      } else if (shape === 'top') {
+        tags = ['Open Balconette', 'Plunge', 'Stretch Lace'];
+      } else if (shape === 'bottom') {
+        tags = ['Balconette', 'Demi', 'Full Coverage'];
+      } else {
+        if (cupIdx <= 3) {
+          tags = ['T-Shirt Bra', 'Push-Up / Demi', 'Wireless Plunge'];
+        } else if (cupIdx <= 6) {
+          tags = ['Balconette', 'Plunge', 'Unlined 3-Piece Cup'];
+        } else {
+          tags = ['Side Support Wire', 'Full Coverage Balconette', 'High-Apex Plunge'];
+        }
+      }
+
+      container.innerHTML = tags.map(t => `<span class="style-match-tag">${t}</span>`).join('');
+    }
+
+    // Main Calculation Algorithm
+    function calculateBraSize() {
+      const unit = document.getElementById('unitSelect').value;
+      const region = document.getElementById('regionSelect').value;
+      const brand = document.getElementById('brandSelect').value;
+
+      let bandInches = 0;
+      let bustInches = 0;
+      let cupOffset = 0;
+
+      if (brand === 'thirdlove') cupOffset = 0.5;
+      if (brand === 'skims') cupOffset = 0.5;
+
+      if (currentMethod === 'standard') {
+        const ub = toInches(getVal('underbust'), unit);
+        const bust = toInches(getVal('bust'), unit);
+
+        if (ub <= 0 || bust <= 0) return;
+
+        const roundedUb = Math.round(ub);
+
+        if (brand === 'victoria' || brand === 'wacoal') {
+          bandInches = (roundedUb % 2 === 0) ? roundedUb + 4 : roundedUb + 5;
+        } else {
+          bandInches = (roundedUb % 2 === 0) ? roundedUb : roundedUb + 1;
+        }
+
+        bustInches = bust;
+      } else {
+        const loose = toInches(getVal('looseUb'), unit);
+        const snug = toInches(getVal('snugUb'), unit);
+        const tight = toInches(getVal('tightUb'), unit);
+        const standing = toInches(getVal('standingBust'), unit);
+        const leaning = toInches(getVal('leaningBust'), unit);
+        const lying = toInches(getVal('lyingBust'), unit);
+
+        if (snug <= 0 || standing <= 0) return;
+
+        let baseUb = snug;
+        if (brand === 'victoria' || brand === 'wacoal') {
+          baseUb += 4;
+        }
+
+        const roundedBand = Math.round(baseUb);
+        bandInches = (roundedBand % 2 === 0) ? roundedBand : roundedBand + 1;
+
+        const diffLeanStand = leaning - standing;
+        if (diffLeanStand <= 2.5) {
+          bustInches = (standing + leaning + lying) / 3;
+        } else {
+          bustInches = standing + (diffLeanStand * 0.55);
+        }
+      }
+
+      const diff = bustInches - bandInches + cupOffset;
+      let cupIdx = Math.round(diff);
+      if (cupIdx < 0) cupIdx = 0;
+      if (cupIdx >= US_CUPS.length) cupIdx = US_CUPS.length - 1;
+
+      const usSize = `${bandInches}${US_CUPS[cupIdx]}`;
+      const ukSize = `${bandInches}${UK_CUPS[cupIdx]}`;
+      const euSize = `${Math.round((bandInches - 32) * 2.5 + 70)}${EU_CUPS[cupIdx]}`;
+      const auSize = `${bandInches - 22}${AU_CUPS[cupIdx]}`;
+      const frSize = `${Math.round((bandInches - 32) * 2.5 + 70) + 15}${FR_CUPS[cupIdx]}`;
+
+      let primaryDisplay = usSize;
+      let regionLabel = 'United States Sizing';
+      if (region === 'uk') { primaryDisplay = ukSize; regionLabel = 'UK Sizing System'; }
+      else if (region === 'eu') { primaryDisplay = euSize; regionLabel = 'European (EU) Standard'; }
+      else if (region === 'au') { primaryDisplay = auSize; regionLabel = 'Australian (AU) System'; }
+      else if (region === 'fr') { primaryDisplay = frSize; regionLabel = 'French / Spanish (FR) System'; }
+
+      const primaryEl = document.getElementById('resPrimarySize');
+      primaryEl.textContent = primaryDisplay;
+
+      document.getElementById('resRegionTag').textContent = regionLabel;
+      document.getElementById('resBandBreakdown').textContent = `Band: ${bandInches} | Cup: ${US_CUPS[cupIdx]}`;
+
+      document.getElementById('resUsVal').textContent = usSize;
+      document.getElementById('resUkVal').textContent = ukSize;
+      document.getElementById('resEuVal').textContent = euSize;
+      document.getElementById('resAuVal').textContent = auSize;
+      document.getElementById('resFrVal').textContent = frSize;
+
+      document.querySelectorAll('.intl-cell').forEach(c => c.classList.remove('active-region'));
+      const activeCell = document.getElementById(`cell${region.charAt(0).toUpperCase() + region.slice(1)}`);
+      if (activeCell) activeCell.classList.add('active-region');
+
+      const brandNames = {
+        'standard': 'Standard Ergonomic',
+        'victoria': "Victoria's Secret (+4)",
+        'wacoal': 'Wacoal Fitted',
+        'skims': 'Skims / Aerie Style',
+        'thirdlove': 'ThirdLove Half-Cup',
+        'marks': 'Marks & Spencer'
+      };
+      document.getElementById('appliedBrandTag').textContent = brandNames[brand] || 'Standard Ergonomic';
+
+      document.getElementById('resultFitSummary').innerHTML = 
+        `Calculated with <strong>${brandNames[brand] || 'Standard'}</strong> logic. Your ribcage measurement translates to a <strong>${bandInches} band</strong> with a ${Math.round(diff * 10)/10}″ differential, giving you an exact <strong>${US_CUPS[cupIdx]} cup</strong>.`;
+
+      updateSilhouette(bandInches, cupIdx);
+      updateBraStyleTags(cupIdx, currentShape);
+      updateSisterSizes(bandInches, cupIdx, region);
+    }
+
+    function updateSisterSizes(band, cupIdx, region) {
+      const tightValEl = document.getElementById('sisterTightVal');
+      const looseValEl = document.getElementById('sisterLooseVal');
+
+      if (band - 2 >= 26 && cupIdx + 1 < US_CUPS.length) {
+        tightValEl.textContent = formatRegional(band - 2, cupIdx + 1, region);
+      } else {
+        tightValEl.textContent = 'None';
+      }
+
+      if (band + 2 <= 60 && cupIdx - 1 >= 0) {
+        looseValEl.textContent = formatRegional(band + 2, cupIdx - 1, region);
+      } else {
+        looseValEl.textContent = 'None';
+      }
+    }
+
+    function saveToPassport() {
+      const primary = document.getElementById('resPrimarySize').textContent;
+      const region = document.getElementById('regionSelect').value.toUpperCase();
+      const date = new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      const record = { size: primary, region: region, date: date };
+      
+      try {
+        localStorage.setItem('imrango_saved_fit', JSON.stringify(record));
+        window.alert(`Saved to your device: ${primary} (${region}) on ${date}`);
+      } catch (e) {
+        window.alert(`Your fit size: ${primary} (${region})`);
+      }
+    }
+
+    function copyResults() {
+      const primary = document.getElementById('resPrimarySize').textContent;
+      const us = document.getElementById('resUsVal').textContent;
+      const uk = document.getElementById('resUkVal').textContent;
+      const eu = document.getElementById('resEuVal').textContent;
+      const au = document.getElementById('resAuVal').textContent;
+      const fr = document.getElementById('resFrVal').textContent;
+
+      const text = `IMRango Bra Size Results:\n• Primary Size: ${primary}\n• US: ${us}\n• UK: ${uk}\n• EU: ${eu}\n• AU: ${au}\n• FR: ${fr}\nhttps://iamrango.com/bra-size-calculator`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          window.alert('Calculated bra sizes copied to clipboard!');
+        }).catch(() => {
+          window.alert(text);
+        });
+      } else {
+        window.alert(text);
+      }
+    }
+
+    document.getElementById('unitSelect').addEventListener('change', function() {
+      const unit = this.value;
+      document.querySelectorAll('.unit-label').forEach(el => el.textContent = unit);
+      
+      const ub = document.getElementById('underbust');
+      const bust = document.getElementById('bust');
+      if (unit === 'cm') {
+        ub.min = '50'; ub.max = '165';
+        bust.min = '60'; bust.max = '190';
+        if (ub.value < 50) ub.value = Math.round(parseFloat(ub.value || 32) * 2.54);
+        if (bust.value < 60) bust.value = Math.round(parseFloat(bust.value || 36) * 2.54);
+      } else {
+        ub.min = '20'; ub.max = '65';
+        bust.min = '24'; bust.max = '75';
+        if (ub.value >= 50) ub.value = Math.round((parseFloat(ub.value) / 2.54) * 2) / 2;
+        if (bust.value >= 60) bust.value = Math.round((parseFloat(bust.value) / 2.54) * 2) / 2;
+      }
+      calculateBraSize();
+    });
+
+    document.getElementById('regionSelect').addEventListener('change', calculateBraSize);
+    document.getElementById('brandSelect').addEventListener('change', calculateBraSize);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateBraSize();
+
+      const inputIds = [
+        'underbust', 'bust', 'looseUb', 'snugUb', 'tightUb',
+        'standingBust', 'leaningBust', 'lyingBust'
+      ];
+      inputIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', calculateBraSize);
+          el.addEventListener('change', calculateBraSize);
+        }
+      });
+    });
+  </script>
 
   <script src="/assets/js/script.js"></script>
 </body>
