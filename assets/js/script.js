@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (closeMobileAd && mobileAdAnchor) {
     closeMobileAd.addEventListener('click', function() {
       mobileAdAnchor.classList.add('dismissed');
+      document.body.classList.add('ad-dismissed');
       try {
         sessionStorage.setItem('imrango_ad_dismissed', 'true');
       } catch (e) {}
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       if (sessionStorage.getItem('imrango_ad_dismissed') === 'true') {
         mobileAdAnchor.classList.add('dismissed');
+        document.body.classList.add('ad-dismissed');
       }
     } catch (e) {}
   }
